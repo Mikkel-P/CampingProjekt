@@ -1,0 +1,11 @@
+﻿.bookingContainer {
+
+}
+
+.calendarBox {
+    display: inline-block;
+}
+
+.textBoxManager {
+    justify-content: space-evenly;
+}
