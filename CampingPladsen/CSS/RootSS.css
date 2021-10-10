@@ -1,0 +1,23 @@
+﻿/*Root stylesheet*/
+
+root * {
+    /*    border: 1px solid red;*/
+}
+
+main {
+    width: 80%;
+    padding: 2% 5%;
+    margin: 0 auto;
+}
+
+body * {
+    /*    border: 1px solid red;*/
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    root {
+        display: block;
+        float: none;
+    }
+}
