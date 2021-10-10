@@ -16,6 +16,7 @@
             </div>
         </div>
 
+
         <div class="homeText">
             <h2>General Info</h2>
             <p>
