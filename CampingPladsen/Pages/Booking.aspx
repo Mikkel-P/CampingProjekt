@@ -64,25 +64,41 @@
                     <asp:Label ID="StandardHytter" runat="server" Text="Antal standard hytter: "></asp:Label>
                     <asp:TextBox ID="TextBox8" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
                 </div>
-                                <div>
-                    <asp:Label ID="Sengelinned" runat="server" Text="Sengelinned: "></asp:Label>
+                <div>
+                    <asp:Label ID="ForårsSæsonplads" runat="server" Text="Forårs sæsonplads: "></asp:Label>
                     <asp:TextBox ID="TextBox9" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
                 </div>
-                                <div>
-                    <asp:Label ID="Slutrengøring" runat="server" Text="Slutrengøring: "></asp:Label>
+                <div>
+                    <asp:Label ID="SommerSæsonplads" runat="server" Text="Sommer sæsonplads: "></asp:Label>
                     <asp:TextBox ID="TextBox10" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
                 </div>
-                                <div>
-                    <asp:Label ID="Cykelleje" runat="server" Text="Cykelleje: "></asp:Label>
+                <div>
+                    <asp:Label ID="EfterårsSæsonplads" runat="server" Text="Efterårs sæsonplads: "></asp:Label>
                     <asp:TextBox ID="TextBox11" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
                 </div>
-                                <div>
-                    <asp:Label ID="BadelandVoksne" runat="server" Text="24 timers badelandsbillet: (Voksne) "></asp:Label>
+                <div>
+                    <asp:Label ID="VinterSæsonplads" runat="server" Text="Vinter sæsonplads: "></asp:Label>
                     <asp:TextBox ID="TextBox12" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
                 </div>
-                                <div>
-                    <asp:Label ID="BadelandBørn" runat="server" Text="24 timers badelandsbillet: (Børn) "></asp:Label>
+                <div>
+                    <asp:Label ID="BadelandVoksne" runat="server" Text="24 timers badelandsbillet: (Voksne) "></asp:Label>
                     <asp:TextBox ID="TextBox13" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="BadelandBørn" runat="server" Text="24 timers badelandsbillet: (Børn) "></asp:Label>
+                    <asp:TextBox ID="TextBox14" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="Cykelleje" runat="server" Text="24 timers cykelleje: (Antal) "></asp:Label>
+                    <asp:TextBox ID="TextBox15" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="Rengøring" runat="server" Text="Rengøring: (Hytter) "></asp:Label>
+                    <asp:TextBox ID="TextBox16" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                </div>
+                <div>
+                    <asp:Label ID="Sengelinned" runat="server" Text="Nyt sengelinned: (Pr. stk.) "></asp:Label>
+                    <asp:TextBox ID="TextBox17" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
                 </div>
             </div>
         </div>
