@@ -12,30 +12,20 @@ namespace CampingProjekt.Pages
     public partial class Booking : System.Web.UI.Page
     {
 
+        Manager manager = new Manager();
 
-        //SqlConnectionStringBuilder sConB = new SqlConnectionStringBuilder()
-        //{
-        //    DataSource = "CAMPINGSERVER", // (172.16.59.43)
-        //    InitialCatalog = "CAMPINGDB",
-        //    UserID = "sa",
-        //    Password = "Password1234"
-        //}
-
-        SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(GetConnectionString());
-
-        // Creates a new SqlConnection with the given parameters, placed here so all methods can reach it
-        SqlConnection con = new SqlConnection(builder.ConnectionString);
-
-        private static string GetConnectionString()
-        {
-            return "Server=172.16.59.43; Initial Catalog=CAMPINGDB; UserID=sa; Password=Password1234!";
-        }
+        SqlConnection tester = new SqlConnection();
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
+        public SqlConnection TestCon2()
+        {
+            return manager.TestCon();
+        }
+        
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
             con.Open();
@@ -46,8 +36,10 @@ namespace CampingProjekt.Pages
             // Converts the DateTime variable to a string
             string aDate = Convert.ToString(arrivalDate);
 
+            tester = TestCon2();
+
             // Inserts the selected arrival date into the Reservations_tabel in the CampingDB
-            SqlCommand insertArrival = new SqlCommand($"INSERT INTO Reservations_tabel (Start_dato) VALUES({aDate})", con);
+            SqlCommand insertArrival = new SqlCommand($"INSERT INTO Reservations_tabel (Start_dato) VALUES({aDate})", tester);
 
             // Executes the insertArrival date as a NonQuery
             insertArrival.ExecuteNonQuery();
