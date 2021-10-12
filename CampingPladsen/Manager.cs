@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace CampingProjekt
 {
@@ -18,36 +20,95 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
+        private DataTable dataTable = new DataTable();
+
         private SqlConnection NewConMan()
         {
             return dal.NewConDal();
         }
 
+        public void DateSubmit(string aDate, string eDate)
+        {
+            newCon = NewConMan();
+            newCon.Open();
+
+            // The right way
+            SqlCommand insertArrival = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertExit = new SqlCommand("StoredProcedure", newCon);
+
+            insertArrival.Parameters.AddWithValue("@Calendar1", aDate);
+            insertExit.Parameters.AddWithValue("@Calendar2", eDate);
+
+            insertArrival.ExecuteNonQuery();
+            insertExit.ExecuteNonQuery();
+
+            newCon.Close();
+        }
+
+        public void GetRsvID()
+        {
+            newCon = NewConMan();
+            newCon.Open();
+
+            string query = "SELECT * FROM ViewName";
+
+            SqlCommand getRsvID = new SqlCommand(query, newCon);
+
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(getRsvID);
+
+            dataAdapt.Fill(dataTable);
+
+            dataAdapt.Dispose();
+
+            newCon.Close();
+        }
+
+        public string GetTableData(DataTable table)
+        {
+            string data = string.Empty;
+
+            StringBuilder holder = new StringBuilder();
+
+            // Commences if the table exists and has atleast 1 row in it
+            if (null != table && null != table.Rows)
+            {
+                // Loops through the rows belonging to the given table
+                foreach (DataRow dataRow in table.Rows)
+                {
+                    // Gets and sets all of the values in the datatable to an array
+                    foreach (var item in dataRow.ItemArray)
+                    {
+                        // Adds values to the array, seperates each value by a comma
+                        holder.Append(item);
+                        holder.Append(',');
+                    }
+                    // Terminates the append operation
+                    holder.AppendLine();
+                }
+                // Converts the array to a string
+                data = holder.ToString();
+            }
+            return data;
+        }
+
         public void InputSubmit
-            (string aDate, string eDate, int antalV, int antalB, int antalH, int antalCPS, int antalCPL, int antalT, int antalLH, int antalSH, int antalSF, 
+            (int antalV, int antalB, int antalH, int antalCPS, int antalCPL, int antalT, int antalLH, int antalSH, int antalSF,
             int antalSS, int antalSE, int antalSV, int badeBilletV, int badeBilletB, int cykelL, int ren, int sengeL)
         {
             newCon = NewConMan();
             newCon.Open();
 
-            // Inserts the selected arrival date into the Reservations_tabel in the CampingDB
-            SqlCommand insertArrival = new SqlCommand($"INSERT INTO Reservations_tabel (Start_dato) VALUES({aDate})", newCon);
-            // Executes the insertArrival date as a NonQuery
-            insertArrival.ExecuteNonQuery();
+            string temp = GetTableData(dataTable);
 
-            SqlCommand insertExit = new SqlCommand($"INSERT INTO Reservations_tabel (Slut_dato) VALUES({eDate})", newCon);
-            insertExit.ExecuteNonQuery();
+            int rsvID = Convert.ToInt32(temp);
 
+            // The right way
+            SqlCommand insertRsvID = new SqlCommand("InputInsertion", newCon);
+            insertRsvID.Parameters.AddWithValue("@RsvID", rsvID);
 
-
-            int id = 0; // Stored procedure der returnerer det højeste Reservation_id
-
-            //SqlCommand insertAntalV = new SqlCommand($"INSERT INTO Person_type_relation (Reservations_id, Person_type, Antal_personer) VALUES({Reservations_id}, Person_type, {antalV})", newCon);
-
-
-            SqlCommand insertAntalV2 = new SqlCommand("SP_Reservation", newCon);
-            insertAntalV2.Parameters.AddWithValue("@VoksenInput", antalV);
-            insertAntalV2.ExecuteNonQuery();
+            SqlCommand insertAntalV = new SqlCommand("InputInsertion", newCon);
+            insertAntalV.Parameters.AddWithValue("@VoksenInput", antalV);
+            insertAntalV.ExecuteNonQuery();
 
             SqlCommand insertAntalB = new SqlCommand($"INSERT INTO Person_type_relation (Antal_personer) VALUES({antalB}) WHERE Person_type = 'Børn'", newCon);
             insertAntalB.ExecuteNonQuery();
@@ -96,8 +157,13 @@ namespace CampingProjekt
 
             SqlCommand insertSL = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({sengeL}) WHERE Tillægs_type = 'Sengelinned'", newCon);
             insertSL.ExecuteNonQuery();
+
+            newCon.Close();
         }
 
 
     }
 }
+
+
+// 

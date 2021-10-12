@@ -11,5 +11,16 @@ namespace CampingProjekt
 
         public Calculation() { }
 
+        Manager manager = new Manager();
+
+
+
+        // SELECT sætninger eller stored procedures til at få fat i de forskellige priser
+        // som ligger i tabellerne
+
+        // Samme for at få dato da denne har indflydelse på pris udregning
+
+
+
     }
 }

@@ -13,7 +13,7 @@ namespace CampingProjekt.Pages
     {
         Manager manager = new Manager();
 
-        protected void TextBoxInput()
+        protected void DateInput()
         {
             DateTime arrivalDate = Calendar1.SelectedDate;
             string aDate = Convert.ToString(arrivalDate);
@@ -21,6 +21,11 @@ namespace CampingProjekt.Pages
             DateTime exitDate = Calendar2.SelectedDate;
             string eDate = Convert.ToString(exitDate);
 
+            manager.DateSubmit(aDate, eDate);
+        }
+
+        protected void TextBoxInput()
+        {
             string antalVoksne = VoksenInput.Text;
             int antalV = Convert.ToInt32(antalVoksne);
 
@@ -73,7 +78,7 @@ namespace CampingProjekt.Pages
             int sengeL = Convert.ToInt32(sengelinned);
 
             manager.InputSubmit
-                (aDate, eDate, antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH, 
+                (antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH, 
                 antalSF, antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
         }
     }
