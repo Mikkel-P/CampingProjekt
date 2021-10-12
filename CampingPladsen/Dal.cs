@@ -12,12 +12,7 @@ namespace CampingProjekt
         // ctor
         public Dal() { }
 
-        public void TestCon()
-        {
-
-        }
-
-        public SqlConnection NewCon()
+        public SqlConnection NewConDal()
         {
             SqlConnection newCon = new SqlConnection();
 

@@ -15,9 +15,9 @@ namespace CampingProjekt
 
         Calculation calc = new Calculation();
 
-        public SqlConnection TestCon()
+        public SqlConnection NewConMan()
         {
-            return dal.NewCon();
+            return dal.NewConDal();
         }
     }
 }
