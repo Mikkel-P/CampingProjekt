@@ -56,3 +56,47 @@ C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\obj\Debug\CampingProjekt.csp
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\obj\Debug\CampingProjekt.csproj.CoreCompileInputs.cache
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\obj\Debug\CampingProjekt.dll
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\obj\Debug\CampingProjekt.pdb
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\CampingProjekt.dll.config
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\CampingProjekt.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\CampingProjekt.pdb
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\csc.exe
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\csc.exe.config
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\csc.rsp
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\csi.exe
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\csi.exe.config
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\csi.rsp
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Buffers.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Memory.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\vbc.exe
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\vbc.exe.config
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\vbc.rsp
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.AssemblyReference.cache
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CoreCompileInputs.cache
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CopyComplete
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.pdb
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.AssemblyReference.cache
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CoreCompileInputs.cache
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.pdb
