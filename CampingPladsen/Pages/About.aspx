@@ -7,17 +7,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
-        <div class="hero-image">
-            <div class="hero-text">
-                <h1>About Camp Camping</h1>
-                <p>En mere detaljeret forklaring om Camp Camping </p>
+        <br />
+        <br />
+     
+        <div class="hero-image" >
+           <asp:Image ID="Image1" runat="server" Height="111px" Width="776px"/>
+                 <h1 style="color: #FFFFFF">Welcome to Camp Camping</h1>
             </div>
-        </div>
+
 
 
         <div class="row">
             <div class="column" style="background-color: rgba(44, 44, 44, .3);">
                 <h1>About Us</h1>
+
+        <div class="hero-text">
+        </div>
+
                 <p>Campingpladsen er placeret i det altid smukke Midtjylland – En perle ikke langt fra Lalandia, Givskud Zoo og ikke mindst Legoland der trækker langt de fleste kunder over til campingpladsen.
                     <br>
                     Derudover har pladsen direkte adgang til en å med gode fiskemuligheder samt mulighed for udlejning af kajakker og kanoer.Selve pladsen har plads til, og er godkendt til,
