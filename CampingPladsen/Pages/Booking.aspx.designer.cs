@@ -42,13 +42,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Voksne;
 
         /// <summary>
-        /// TextBox1 control.
+        /// VoksenInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox VoksenInput;
 
         /// <summary>
         /// Børn control.
@@ -60,13 +60,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Børn;
 
         /// <summary>
-        /// TextBox2 control.
+        /// BarnInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox BarnInput;
 
         /// <summary>
         /// Hunde control.
@@ -78,13 +78,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Hunde;
 
         /// <summary>
-        /// TextBox3 control.
+        /// HundeInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox HundeInput;
 
         /// <summary>
         /// StorCampingplads control.
@@ -96,13 +96,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label StorCampingplads;
 
         /// <summary>
-        /// TextBox4 control.
+        /// StorCpInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox StorCpInput;
 
         /// <summary>
         /// LilleCampingplads control.
@@ -114,13 +114,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label LilleCampingplads;
 
         /// <summary>
-        /// TextBox5 control.
+        /// LilleCpInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox LilleCpInput;
 
         /// <summary>
         /// Teltpladser control.
@@ -132,13 +132,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Teltpladser;
 
         /// <summary>
-        /// TextBox6 control.
+        /// TeltInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox TeltInput;
 
         /// <summary>
         /// LuksusHytter control.
@@ -150,13 +150,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label LuksusHytter;
 
         /// <summary>
-        /// TextBox7 control.
+        /// LukHytInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox LukHytInput;
 
         /// <summary>
         /// StandardHytter control.
@@ -168,13 +168,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label StandardHytter;
 
         /// <summary>
-        /// TextBox8 control.
+        /// StandHytInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox StandHytInput;
 
         /// <summary>
         /// ForårsSæsonplads control.
@@ -186,13 +186,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label ForårsSæsonplads;
 
         /// <summary>
-        /// TextBox9 control.
+        /// ForInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox ForInput;
 
         /// <summary>
         /// SommerSæsonplads control.
@@ -204,13 +204,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label SommerSæsonplads;
 
         /// <summary>
-        /// TextBox10 control.
+        /// SommerInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox SommerInput;
 
         /// <summary>
         /// EfterårsSæsonplads control.
@@ -222,13 +222,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label EfterårsSæsonplads;
 
         /// <summary>
-        /// TextBox11 control.
+        /// EfterInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox EfterInput;
 
         /// <summary>
         /// VinterSæsonplads control.
@@ -240,13 +240,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label VinterSæsonplads;
 
         /// <summary>
-        /// TextBox12 control.
+        /// VinterInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox VinterInput;
 
         /// <summary>
         /// BadelandVoksne control.
@@ -258,13 +258,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label BadelandVoksne;
 
         /// <summary>
-        /// TextBox13 control.
+        /// BadeVoksenInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox BadeVoksenInput;
 
         /// <summary>
         /// BadelandBørn control.
@@ -276,13 +276,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label BadelandBørn;
 
         /// <summary>
-        /// TextBox14 control.
+        /// BadeBarnInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox BadeBarnInput;
 
         /// <summary>
         /// Cykelleje control.
@@ -294,13 +294,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Cykelleje;
 
         /// <summary>
-        /// TextBox15 control.
+        /// CykelInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox CykelInput;
 
         /// <summary>
         /// Rengøring control.
@@ -312,13 +312,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Rengøring;
 
         /// <summary>
-        /// TextBox16 control.
+        /// RenInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+        protected global::System.Web.UI.WebControls.TextBox RenInput;
 
         /// <summary>
         /// Sengelinned control.
@@ -330,12 +330,12 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Sengelinned;
 
         /// <summary>
-        /// TextBox17 control.
+        /// SengeInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox17;
+        protected global::System.Web.UI.WebControls.TextBox SengeInput;
     }
 }

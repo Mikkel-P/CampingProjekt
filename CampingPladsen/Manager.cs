@@ -8,6 +8,7 @@ namespace CampingProjekt
 {
     public class Manager
     {
+        // Gemme alle værdier inden de sendes til DB, lav reservation først, så vi får et reservations_id, og tilføj så værdier til tabellerne
 
         public Manager() { }
 
@@ -17,7 +18,7 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
-        public SqlConnection NewConMan()
+        private SqlConnection NewConMan()
         {
             return dal.NewConDal();
         }
@@ -37,8 +38,16 @@ namespace CampingProjekt
             SqlCommand insertExit = new SqlCommand($"INSERT INTO Reservations_tabel (Slut_dato) VALUES({eDate})", newCon);
             insertExit.ExecuteNonQuery();
 
-            SqlCommand insertAntalV = new SqlCommand($"INSERT INTO Person_type_relation (Antal_personer) VALUES({antalV}) WHERE Person_type = 'Voksne'", newCon);
-            insertAntalV.ExecuteNonQuery();
+
+
+            int id = 0; // Stored procedure der returnerer det højeste Reservation_id
+
+            //SqlCommand insertAntalV = new SqlCommand($"INSERT INTO Person_type_relation (Reservations_id, Person_type, Antal_personer) VALUES({Reservations_id}, Person_type, {antalV})", newCon);
+
+
+            SqlCommand insertAntalV2 = new SqlCommand("SP_Reservation", newCon);
+            insertAntalV2.Parameters.AddWithValue("@VoksenInput", antalV);
+            insertAntalV2.ExecuteNonQuery();
 
             SqlCommand insertAntalB = new SqlCommand($"INSERT INTO Person_type_relation (Antal_personer) VALUES({antalB}) WHERE Person_type = 'Børn'", newCon);
             insertAntalB.ExecuteNonQuery();
@@ -88,5 +97,7 @@ namespace CampingProjekt
             SqlCommand insertSL = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({sengeL}) WHERE Tillægs_type = 'Sengelinned'", newCon);
             insertSL.ExecuteNonQuery();
         }
+
+
     }
 }

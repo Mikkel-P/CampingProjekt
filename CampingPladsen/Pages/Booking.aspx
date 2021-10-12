@@ -9,7 +9,7 @@
     <main>
         <div class="bookingContainer">
             <div class="calendarBox">
-                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="98px" OnSelectionChanged="Calendar1_SelectionChanged" Width="21px">
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="100px" Width="75px">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                     <NextPrevStyle VerticalAlign="Bottom" />
                     <OtherMonthDayStyle ForeColor="#808080" />
@@ -19,7 +19,7 @@
                     <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <WeekendDayStyle BackColor="#FFFFCC" />
                 </asp:Calendar>
-                <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="115px" OnSelectionChanged="Calendar2_SelectionChanged" Width="77px">
+                <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="100px" Width="75px">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                     <NextPrevStyle VerticalAlign="Bottom" />
                     <OtherMonthDayStyle ForeColor="#808080" />
@@ -34,71 +34,71 @@
             <div class="textBoxManager">
                 <div>
                     <asp:Label ID="Voksne" runat="server" Text="Antal voksne: "></asp:Label>
-                    <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID=VoksenInput runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Børn" runat="server" Text="Antal børn: "></asp:Label>
-                    <asp:TextBox ID="TextBox2" runat="server" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="BarnInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Hunde" runat="server" Text="Antal hunde: "></asp:Label>
-                    <asp:TextBox ID="TextBox3" runat="server" OnTextChanged="TextBox3_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="HundeInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="StorCampingplads" runat="server" Text="Antal campingpladser: (Store) "></asp:Label>
-                    <asp:TextBox ID="TextBox4" runat="server" OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="StorCpInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="LilleCampingplads" runat="server" Text="Antal campingpladser: (Lille) "></asp:Label>
-                    <asp:TextBox ID="TextBox5" runat="server" OnTextChanged="TextBox5_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="LilleCpInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Teltpladser" runat="server" Text="Antal teltpladser: "></asp:Label>
-                    <asp:TextBox ID="TextBox6" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="TeltInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="LuksusHytter" runat="server" Text="Antal luksus hytter: "></asp:Label>
-                    <asp:TextBox ID="TextBox7" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="LukHytInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="StandardHytter" runat="server" Text="Antal standard hytter: "></asp:Label>
-                    <asp:TextBox ID="TextBox8" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="StandHytInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="ForårsSæsonplads" runat="server" Text="Forårs sæsonplads: "></asp:Label>
-                    <asp:TextBox ID="TextBox9" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="ForInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="SommerSæsonplads" runat="server" Text="Sommer sæsonplads: "></asp:Label>
-                    <asp:TextBox ID="TextBox10" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="SommerInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="EfterårsSæsonplads" runat="server" Text="Efterårs sæsonplads: "></asp:Label>
-                    <asp:TextBox ID="TextBox11" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="EfterInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="VinterSæsonplads" runat="server" Text="Vinter sæsonplads: "></asp:Label>
-                    <asp:TextBox ID="TextBox12" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="VinterInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="BadelandVoksne" runat="server" Text="24 timers badelandsbillet: (Voksne) "></asp:Label>
-                    <asp:TextBox ID="TextBox13" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="BadeVoksenInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="BadelandBørn" runat="server" Text="24 timers badelandsbillet: (Børn) "></asp:Label>
-                    <asp:TextBox ID="TextBox14" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="BadeBarnInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Cykelleje" runat="server" Text="24 timers cykelleje: (Antal) "></asp:Label>
-                    <asp:TextBox ID="TextBox15" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="CykelInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Rengøring" runat="server" Text="Rengøring: (Hytter) "></asp:Label>
-                    <asp:TextBox ID="TextBox16" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="RenInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Sengelinned" runat="server" Text="Nyt sengelinned: (Pr. stk.) "></asp:Label>
-                    <asp:TextBox ID="TextBox17" runat="server" OnTextChanged="TextBox6_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="SengeInput" runat="server"></asp:TextBox>
                 </div>
             </div>
         </div>

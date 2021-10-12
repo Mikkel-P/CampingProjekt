@@ -13,12 +13,7 @@ namespace CampingProjekt.Pages
     {
         Manager manager = new Manager();
 
-        public SqlConnection NewConUI()
-        {
-            return manager.NewConMan();
-        }
-
-        protected void InputMethod()
+        protected void TextBoxInput()
         {
             DateTime arrivalDate = Calendar1.SelectedDate;
             string aDate = Convert.ToString(arrivalDate);
@@ -26,60 +21,60 @@ namespace CampingProjekt.Pages
             DateTime exitDate = Calendar2.SelectedDate;
             string eDate = Convert.ToString(exitDate);
 
-            string antalVoksne = TextBox1.Text;
+            string antalVoksne = VoksenInput.Text;
             int antalV = Convert.ToInt32(antalVoksne);
 
-            string antalBørn = TextBox2.Text;
+            string antalBørn = BarnInput.Text;
             int antalB = Convert.ToInt32(antalBørn);
 
-            string antalHunde = TextBox3.Text;
+            string antalHunde = HundeInput.Text;
             int antalH = Convert.ToInt32(antalHunde);
 
-            string antalCPstor = TextBox4.Text;
+            string antalCPstor = StorCpInput.Text;
             int antalCPS = Convert.ToInt32(antalCPstor);
 
-            string antalCPlille = TextBox5.Text;
+            string antalCPlille = LilleCpInput.Text;
             int antalCPL = Convert.ToInt32(antalCPlille);
 
-            string antalTelte = TextBox6.Text;
+            string antalTelte = TeltInput.Text;
             int antalT = Convert.ToInt32(antalTelte);
 
-            string antalLHytte = TextBox7.Text;
+            string antalLHytte = LukHytInput.Text;
             int antalLH = Convert.ToInt32(antalLHytte);
 
-            string antalSHytte = TextBox8.Text;
+            string antalSHytte = StandHytInput.Text;
             int antalSH = Convert.ToInt32(antalSHytte);
 
-            string sæsonF = TextBox9.Text;
+            string sæsonF = ForInput.Text;
             int antalSF = Convert.ToInt32(sæsonF);
 
-            string sæsonS = TextBox10.Text;
+            string sæsonS = SommerInput.Text;
             int antalSS = Convert.ToInt32(sæsonS);
 
-            string sæsonE = TextBox11.Text;
+            string sæsonE = EfterInput.Text;
             int antalSE = Convert.ToInt32(sæsonE);
 
-            string sæsonV = TextBox12.Text;
+            string sæsonV = VinterInput.Text;
             int antalSV = Convert.ToInt32(sæsonV);
 
-            string badeBilletVoksen = TextBox13.Text;
+            string badeBilletVoksen = BadeVoksenInput.Text;
             int badeBilletV = Convert.ToInt32(badeBilletVoksen);
 
-            string badeBilletBarn = TextBox14.Text;
+            string badeBilletBarn = BadeBarnInput.Text;
             int badeBilletB = Convert.ToInt32(badeBilletBarn);
 
-            string cykelleje = TextBox15.Text;
+            string cykelleje = CykelInput.Text;
             int cykelL = Convert.ToInt32(cykelleje);
 
-            string rengøring = TextBox16.Text;
+            string rengøring = RenInput.Text;
             int ren = Convert.ToInt32(rengøring);
 
-            string sengelinned = TextBox17.Text;
+            string sengelinned = SengeInput.Text;
             int sengeL = Convert.ToInt32(sengelinned);
 
             manager.InputSubmit
-                (aDate, eDate, antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH, antalSF, 
-                antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
+                (aDate, eDate, antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH, 
+                antalSF, antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
         }
     }
 }
