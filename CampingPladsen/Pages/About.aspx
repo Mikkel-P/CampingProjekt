@@ -9,21 +9,17 @@
     <main>
         <br />
         <br />
-     
-        <div class="hero-image" >
-           <asp:Image ID="Image1" runat="server" Height="111px" Width="776px"/>
-                 <h1 style="color: #FFFFFF">Welcome to Camp Camping</h1>
+  
+        <div class="hero-image">
+            <asp:Image ID="Image1" runat="server" Height="96px" Width="815px" class ="hero-image" ImageUrl="https://wallpapercave.com/wp/wp4628644.jpg" ImageAlign="Middle"/>
+             <h1 style="color: #FFFFFF">Welcome to Camp Camping</h1>
             </div>
 
-
+     
 
         <div class="row">
             <div class="column" style="background-color: rgba(44, 44, 44, .3);">
                 <h1>About Us</h1>
-
-        <div class="hero-text">
-        </div>
-
                 <p>Campingpladsen er placeret i det altid smukke Midtjylland – En perle ikke langt fra Lalandia, Givskud Zoo og ikke mindst Legoland der trækker langt de fleste kunder over til campingpladsen.
                     <br>
                     Derudover har pladsen direkte adgang til en å med gode fiskemuligheder samt mulighed for udlejning af kajakker og kanoer.Selve pladsen har plads til, og er godkendt til,
