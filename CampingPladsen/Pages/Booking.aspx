@@ -7,9 +7,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
-        <div class="bookingContainer">
+
+        <br />
+        <br />
+        
+        <div style="text-align:left" class="bookingContainer">
             <div class="calendarBox">
-                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="98px" OnSelectionChanged="Calendar1_SelectionChanged" Width="21px">
+                 <h2 style="color: #FFFFFF; background-color: #C0C0C0;">Start Dato</h2>
+                <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="118px" OnSelectionChanged="Calendar2_SelectionChanged" Width="260px">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                     <NextPrevStyle VerticalAlign="Bottom" />
                     <OtherMonthDayStyle ForeColor="#808080" />
@@ -19,7 +24,9 @@
                     <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <WeekendDayStyle BackColor="#FFFFCC" />
                 </asp:Calendar>
-                <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="115px" OnSelectionChanged="Calendar2_SelectionChanged" Width="77px">
+                <br />
+                 <h2 style="color: #FFFFFF; background-color: #C0C0C0;" >Slut Dato</h2>
+                  <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="98px" OnSelectionChanged="Calendar1_SelectionChanged" Width="263px">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                     <NextPrevStyle VerticalAlign="Bottom" />
                     <OtherMonthDayStyle ForeColor="#808080" />
@@ -30,7 +37,9 @@
                     <WeekendDayStyle BackColor="#FFFFCC" />
                 </asp:Calendar>
             </div>
-
+            <br />
+            <asp:Image ID="Image1" runat="server" Height="98px" Width="815px" ImageUrl="https://image.freepik.com/free-vector/camping-horizontal-background-night-cartoon-style_96318-819.jpg" ImageAlign="Left"/>
+             <h1 style="color: #FFFFFF; background-color: #C0C0C0;">Reservation</h1>
             <div class="textBoxManager">
                 <div>
                     <asp:Label ID="Voksne" runat="server" Text="Antal voksne: "></asp:Label>

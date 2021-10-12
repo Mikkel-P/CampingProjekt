@@ -10,8 +10,7 @@ main {
     margin: 0 auto;
 }
 
-body * {
-    /*    border: 1px solid red;*/
+body * {    width: 497px;
 }
 
 /* Change styles for span and cancel button on extra small screens */

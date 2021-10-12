@@ -7,13 +7,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
+        <br />
+        <br />
+  
         <div class="hero-image">
-            <div class="hero-text">
-                <h1>About Camp Camping</h1>
-                <p>En mere detaljeret forklaring om Camp Camping </p>
+            <asp:Image ID="Image1" runat="server" Height="96px" Width="815px" class ="hero-image" ImageUrl="https://wallpapercave.com/wp/wp4628644.jpg" ImageAlign="Middle"/>
+             <h1 style="color: #FFFFFF">Welcome to Camp Camping</h1>
             </div>
-        </div>
 
+     
 
         <div class="row">
             <div class="column" style="background-color: rgba(44, 44, 44, .3);">
