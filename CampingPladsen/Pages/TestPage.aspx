@@ -10,7 +10,7 @@
 
         <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
 
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID=VoksenInput runat="server"></asp:TextBox>
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
 
