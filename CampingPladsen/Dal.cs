@@ -27,10 +27,5 @@ namespace CampingProjekt
         {
             return "Data Source=172.16.59.46;Initial Catalog=CampingDB;Persist Security Info=True;User ID=sa;Password=Password1234!";
         }
-
-        public void GetID()
-        {
-            SqlCommand getID = new SqlCommand("")
-        }
     }
 }

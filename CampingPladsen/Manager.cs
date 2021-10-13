@@ -22,7 +22,7 @@ namespace CampingProjekt
 
         private DataTable dataTable = new DataTable();
 
-        private SqlConnection NewConMan()
+        public SqlConnection NewConMan()
         {
             return dal.NewConDal();
         }
@@ -110,60 +110,71 @@ namespace CampingProjekt
             insertAntalV.Parameters.AddWithValue("@VoksenInput", antalV);
             insertAntalV.ExecuteNonQuery();
 
-            SqlCommand insertAntalB = new SqlCommand($"INSERT INTO Person_type_relation (Antal_personer) VALUES({antalB}) WHERE Person_type = 'Børn'", newCon);
+            SqlCommand insertAntalB = new SqlCommand("InputInsertion", newCon);
+            insertAntalB.Parameters.AddWithValue("@BarnInput", antalB);
             insertAntalB.ExecuteNonQuery();
 
-            SqlCommand insertAntalH = new SqlCommand($"INSERT INTO Person_type_relation (Antal_personer) VALUES({antalH}) WHERE Person_type = 'Hund'", newCon);
+            SqlCommand insertAntalH = new SqlCommand("InputInsertion", newCon);
+            insertAntalH.Parameters.AddWithValue("@HundeInput", antalH);
             insertAntalH.ExecuteNonQuery();
 
-            SqlCommand insertCPS = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalCPS}) WHERE Plads_type = 'Stor campingplads'", newCon);
+            SqlCommand insertCPS = new SqlCommand("InputInsertion", newCon);
+            insertCPS.Parameters.AddWithValue("@StorCpInput", antalCPS);
             insertCPS.ExecuteNonQuery();
 
-            SqlCommand insertCPL = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalCPL}) WHERE Plads_type = 'Stor campingplads'", newCon);
+            SqlCommand insertCPL = new SqlCommand("InputInsertion", newCon);
+            insertCPL.Parameters.AddWithValue("@LilleCpInput", antalCPL);
             insertCPL.ExecuteNonQuery();
 
-            SqlCommand insertT = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalT}) WHERE Plads_type = 'Teltplads'", newCon);
+            SqlCommand insertT = new SqlCommand("InputInsertion", newCon);
+            insertT.Parameters.AddWithValue("@TeltInput", antalT);
             insertT.ExecuteNonQuery();
 
-            SqlCommand insertLH = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalLH}) WHERE Plads_type = 'Luksus hytte'", newCon);
+            SqlCommand insertLH = new SqlCommand("InputInsertion", newCon);
+            insertLH.Parameters.AddWithValue("@LukHytInput", antalLH);
             insertLH.ExecuteNonQuery();
 
-            SqlCommand insertSH = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalSH}) WHERE Plads_type = 'Standard hytte'", newCon);
+            SqlCommand insertSH = new SqlCommand("InputInsertion", newCon);
+            insertSH.Parameters.AddWithValue("@StandHytInput", antalSH);
             insertSH.ExecuteNonQuery();
 
-            SqlCommand insertSF = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalSF}) WHERE Plads_type = 'Forår'", newCon);
+            SqlCommand insertSF = new SqlCommand("InputInsertion", newCon);
+            insertSF.Parameters.AddWithValue("@ForInput", antalSF);
             insertSF.ExecuteNonQuery();
 
-            SqlCommand insertSS = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalSS}) WHERE Plads_type = 'Sommer'", newCon);
+            SqlCommand insertSS = new SqlCommand("InputInsertion", newCon);
+            insertSS.Parameters.AddWithValue("@SommerInput", antalSS);
             insertSS.ExecuteNonQuery();
 
-            SqlCommand insertSE = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalSE}) WHERE Plads_type = 'Efterår'", newCon);
+            SqlCommand insertSE = new SqlCommand("InputInsertion", newCon);
+            insertSE.Parameters.AddWithValue("@EfterInput", antalSE);
             insertSE.ExecuteNonQuery();
 
-            SqlCommand insertSV = new SqlCommand($"INSERT INTO Plads_type_relation (Antal_pladser) VALUES({antalSV}) WHERE Plads_type = 'Vinter'", newCon);
+            SqlCommand insertSV = new SqlCommand("InputInsertion", newCon);
+            insertSV.Parameters.AddWithValue("@VinterInput", antalSV);
             insertSV.ExecuteNonQuery();
 
-            SqlCommand insertBBV = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({badeBilletV}) WHERE Tillægs_type = 'Badeland_voksen'", newCon);
+            SqlCommand insertBBV = new SqlCommand("InputInsertion", newCon);
+            insertBBV.Parameters.AddWithValue("@BadeVoksenInput", badeBilletV);
             insertBBV.ExecuteNonQuery();
 
-            SqlCommand insertBBB = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({badeBilletB}) WHERE Tillægs_type = 'Badeland_børn'", newCon);
+            SqlCommand insertBBB = new SqlCommand("InputInsertion", newCon);
+            insertBBB.Parameters.AddWithValue("@BadeBarnInput", badeBilletB);
             insertBBB.ExecuteNonQuery();
 
-            SqlCommand insertCL = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({cykelL}) WHERE Tillægs_type = 'Cykelleje'", newCon);
+            SqlCommand insertCL = new SqlCommand("InputInsertion", newCon);
+            insertCL.Parameters.AddWithValue("@CykelInput", cykelL);
             insertCL.ExecuteNonQuery();
 
-            SqlCommand insertRen = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({ren}) WHERE Tillægs_type = 'Rengøring'", newCon);
+            SqlCommand insertRen = new SqlCommand("InputInsertion", newCon);
+            insertRen.Parameters.AddWithValue("@RenInput", ren);
             insertRen.ExecuteNonQuery();
 
-            SqlCommand insertSL = new SqlCommand($"INSERT INTO Tillægs_type_relation (Antal_tillæg) VALUES({sengeL}) WHERE Tillægs_type = 'Sengelinned'", newCon);
+            SqlCommand insertSL = new SqlCommand("InputInsertion", newCon);
+            insertSL.Parameters.AddWithValue("@SengeInput", sengeL);
             insertSL.ExecuteNonQuery();
 
             newCon.Close();
         }
-
-
     }
 }
-
-
-// 
