@@ -10,7 +10,9 @@ main {
     margin: 0 auto;
 }
 
-body * {    width: 497px;
+body * {
+    width: auto;
+   
 }
 
 /* Change styles for span and cancel button on extra small screens */

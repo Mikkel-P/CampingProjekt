@@ -75,6 +75,8 @@
     <Content Include="CSS\MasterSS.css" />
     <Content Include="CSS\RootSS.css" />
     <Content Include="CSS\IndexSS.css" />
+    <Content Include="Images\Camping picture.PNG" />
+    <Content Include="Images\Camping picture2.PNG" />
     <Content Include="Index.aspx" />
     <Content Include="Pages\About.aspx" />
     <Content Include="Pages\Booking.aspx" />
