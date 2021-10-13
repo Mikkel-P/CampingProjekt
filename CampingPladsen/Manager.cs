@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -10,8 +7,6 @@ namespace CampingProjekt
 {
     public class Manager
     {
-        // Gemme alle værdier inden de sendes til DB, lav reservation først, så vi får et reservations_id, og tilføj så værdier til tabellerne
-
         public Manager() { }
 
         Dal dal = new Dal();
@@ -20,7 +15,7 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
-        private DataTable dataTable = new DataTable();
+        public DataTable dataTable = new DataTable();
 
         public SqlConnection NewConMan()
         {
@@ -45,6 +40,7 @@ namespace CampingProjekt
             newCon.Close();
         }
 
+        // Make view for this method
         public void GetRsvID()
         {
             newCon = NewConMan();
@@ -91,6 +87,7 @@ namespace CampingProjekt
             return data;
         }
 
+        // Could easily be optimized with an array
         public void InputSubmit
             (int antalV, int antalB, int antalH, int antalCPS, int antalCPL, int antalT, int antalLH, int antalSH, int antalSF,
             int antalSS, int antalSE, int antalSV, int badeBilletV, int badeBilletB, int cykelL, int ren, int sengeL)
@@ -175,6 +172,50 @@ namespace CampingProjekt
             insertSL.ExecuteNonQuery();
 
             newCon.Close();
+        }
+
+        // Make a stored procedure for this
+        // Could be optimized with an array for each data type
+        public void PersonalInfoSubmit(int cpr, string fornavn, string efternavn, string vejnavn, int husNr, int postNr, string email, string password)
+        {
+            // The right way
+            SqlCommand insertCpr = new SqlCommand("StoredProcedure", newCon);
+            insertCpr.Parameters.AddWithValue("@CprInput", cpr);
+            insertCpr.ExecuteNonQuery();
+
+            SqlCommand insertfornavn = new SqlCommand("StoredProcedure", newCon);
+            insertfornavn.Parameters.AddWithValue("@fornavnInput", fornavn);
+            insertfornavn.ExecuteNonQuery();
+
+            SqlCommand insertEfternavn = new SqlCommand("StoredProcedure", newCon);
+            insertEfternavn.Parameters.AddWithValue("@EfternavnInput", efternavn);
+            insertEfternavn.ExecuteNonQuery();
+
+            SqlCommand insertVejnavn = new SqlCommand("StoredProcedure", newCon);
+            insertVejnavn.Parameters.AddWithValue("@VejnavnInput", vejnavn);
+            insertVejnavn.ExecuteNonQuery();
+
+            SqlCommand insertHusNr = new SqlCommand("StoredProcedure", newCon);
+            insertHusNr.Parameters.AddWithValue("@HusNrInput", husNr);
+            insertHusNr.ExecuteNonQuery();
+
+            SqlCommand insertPostNr = new SqlCommand("StoredProcedure", newCon);
+            insertPostNr.Parameters.AddWithValue("@PostNrInput", postNr);
+            insertPostNr.ExecuteNonQuery();
+
+            SqlCommand insertEmail = new SqlCommand("StoredProcedure", newCon);
+            insertEmail.Parameters.AddWithValue("@EmailInput", email);
+            insertEmail.ExecuteNonQuery();
+
+            SqlCommand insertPassword = new SqlCommand("StoredProcedure", newCon);
+            insertPassword.Parameters.AddWithValue("@PasswordInput", password);
+            insertPassword.ExecuteNonQuery();
+        }
+
+        // Call on this from the ui that should display total price
+        public int PriceMover()
+        {
+            return calc.PriceCalc();
         }
     }
 }

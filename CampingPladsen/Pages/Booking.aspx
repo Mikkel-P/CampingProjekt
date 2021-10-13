@@ -159,7 +159,7 @@
                 </div>
                 <div>
                     <asp:Label ID="Postnummer" runat="server" Text="Postnummer: "></asp:Label>
-                    <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="postNrInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Email" runat="server" Text="Email: "></asp:Label>
@@ -191,7 +191,7 @@
                 
       </asp:gridview>
 
-             <div class="row">
+<%--             <div class="row">
                 <div class="col-xs-6">
                     <h1 style="color: #FFFFFF; background-color: #C0C0C0;">Prisliste</h1>
             <img src="../Images/Camping%20picture2.PNG" />
@@ -201,7 +201,7 @@
                     
                     <asp:TextBox type="text" class="form-control" ID="number" runat="server" />
                 </div>
-            </div>
+            </div>--%>
 
  
 

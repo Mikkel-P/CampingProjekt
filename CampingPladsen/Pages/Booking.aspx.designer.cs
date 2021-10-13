@@ -276,21 +276,12 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox BadeVoksenInput;
 
         /// <summary>
-        /// CPR control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>        
-        protected global::System.Web.UI.WebControls.Label CPR;
-
-        /// <summary>
         /// BadelandBørn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>  
+        /// </remarks>
         protected global::System.Web.UI.WebControls.Label BadelandBørn;
 
         /// <summary>
@@ -310,15 +301,6 @@ namespace CampingProjekt.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Cykelleje;
-        
-        /// <summary>
-        /// Fornavn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Fornavn;
 
         /// <summary>
         /// CykelInput control.
@@ -339,15 +321,6 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Rengøring;
 
         /// <summary>
-        /// Efternavn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Efternavn;
-
-        /// <summary>
         /// RenInput control.
         /// </summary>
         /// <remarks>
@@ -366,6 +339,69 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Sengelinned;
 
         /// <summary>
+        /// SengeInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox SengeInput;
+
+        /// <summary>
+        /// CPR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CPR;
+
+        /// <summary>
+        /// cprInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox cprInput;
+
+        /// <summary>
+        /// Fornavn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Fornavn;
+
+        /// <summary>
+        /// fornavnInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox fornavnInput;
+
+        /// <summary>
+        /// Efternavn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Efternavn;
+
+        /// <summary>
+        /// efternavnInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox efternavnInput;
+
+        /// <summary>
         /// Vejnavn control.
         /// </summary>
         /// <remarks>
@@ -373,6 +409,15 @@ namespace CampingProjekt.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Vejnavn;
+
+        /// <summary>
+        /// vejnavnInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox vejnavnInput;
 
         /// <summary>
         /// HusNr control.
@@ -384,6 +429,15 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label HusNr;
 
         /// <summary>
+        /// husNrInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox husNrInput;
+
+        /// <summary>
         /// Postnummer control.
         /// </summary>
         /// <remarks>
@@ -393,22 +447,57 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Postnummer;
 
         /// <summary>
-        /// SengeInput control.
+        /// postNrInput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SengeInput;
+        protected global::System.Web.UI.WebControls.TextBox postNrInput;
 
         /// <summary>
-        /// HyperLink1 control.
+        /// Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Label Email;
 
+        /// <summary>
+        /// emailInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox emailInput;
+
+        /// <summary>
+        /// Password control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Password;
+
+        /// <summary>
+        /// passwordInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwordInput;
+
+        /// <summary>
+        /// CustomersGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView CustomersGridView;
     }
 }
