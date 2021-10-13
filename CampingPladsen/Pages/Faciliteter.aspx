@@ -7,12 +7,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
+
+         <%-- Top Image Start --%>
+
+    
         <div class="hero-image">
             <div class="hero-text">
+                    <br />
                 <h1>Faciliter</h1>
                 <p>En mere detaljeret forklaring om Faciliteterne på Camp Camping </p>
             </div>
         </div>
+
+         <%-- Top Image End --%>
+
+
+         <%-- Facility List Start --%>
 
         <div class="header">
             <div class="customContainer" style="background-color: rgba(44, 44, 44, 0.3);">
@@ -27,10 +37,19 @@
                     <li>Gedefold</li>
                     <li>Bålplads</li>
                 </ul>
+
+                 <%-- Facility List End --%>
+
                 <br>
+
+                 <%-- Facility Image Start --%>
+
                 <div class="customContainer">
-                    <img alt="Camping kort" class="center" src="file:///C:/Users/jaco583c/OneDrive%20-%20EFIF/Billeder/Camping%20picture.PNG">
+                        <img src="../Images/Camping%20picture.PNG" />
                 </div>
+
+                  <%-- Facility Image End --%>
+
             </div>
         </div>
     </main>

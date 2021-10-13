@@ -276,12 +276,21 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox TextBox13;
 
         /// <summary>
+        /// CPR control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>        
+        protected global::System.Web.UI.WebControls.Label CPR;
+
+        /// <summary>
         /// BadelandBørn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
+        /// </remarks>  
         protected global::System.Web.UI.WebControls.Label BadelandBørn;
 
         /// <summary>
@@ -301,6 +310,15 @@ namespace CampingProjekt.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Cykelleje;
+        
+        /// <summary>
+        /// Fornavn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Fornavn;
 
         /// <summary>
         /// TextBox15 control.
@@ -321,6 +339,15 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Rengøring;
 
         /// <summary>
+        /// Efternavn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Efternavn;
+
+        /// <summary>
         /// TextBox16 control.
         /// </summary>
         /// <remarks>
@@ -339,6 +366,15 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.Label Sengelinned;
 
         /// <summary>
+        /// Adresse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Adresse;
+
+        /// <summary>
         /// TextBox17 control.
         /// </summary>
         /// <remarks>
@@ -346,5 +382,14 @@ namespace CampingProjekt.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox17;
+
+        /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
     }
 }

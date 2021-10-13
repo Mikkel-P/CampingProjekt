@@ -9,16 +9,23 @@
     <main>
         <br />
         <br />
+
+        <%-- Top Image Start --%>
+      
   
         <div class="hero-image">
             <asp:Image ID="Image1" runat="server" Height="96px" Width="815px" class ="hero-image" ImageUrl="https://wallpapercave.com/wp/wp4628644.jpg" ImageAlign="Middle"/>
              <h1 style="color: #FFFFFF">Welcome to Camp Camping</h1>
             </div>
 
+        <%-- Top Image End --%>
+
+        
      
+         <%-- Description Start --%>
 
         <div class="row">
-            <div class="column" style="background-color: rgba(44, 44, 44, .3);">
+            <div class="container" style="background-color: rgba(44, 44, 44, .3);">
                 <h1>About Us</h1>
                 <p>Campingpladsen er placeret i det altid smukke Midtjylland – En perle ikke langt fra Lalandia, Givskud Zoo og ikke mindst Legoland der trækker langt de fleste kunder over til campingpladsen.
                     <br>
@@ -26,7 +33,7 @@
                     <br>
                     217 pladser på deres i alt ca. 4 hektar. Derudover er der 7 hytter på 16 m2 hver og 6 luksus hytter på 20 m2. </p>
             </div>
-            <div class="column" style="background-color: rgba(44, 44, 44, .3);">
+            <div class="container" style="background-color: rgba(44, 44, 44, .3);">
                 <h1>Fordele ved camping på Camp Camping</h1>
                 <p>At skabe minder: Camping er helt sikkert en oplevelse, din familie aldrig vil glemme. Fra en dag med at udforske alt, hvad din campingplads har at byde på, til en aften, hvor du kan stege s'mores rundt om bålet, vil disse minder vare evigt. Plus, chancen for at lære nye færdigheder og opleve nye ting holder os alle unge i hjertet!
                     <br>
@@ -37,5 +44,8 @@
                     Læringsmuligheder: Uanset om du laver mad udenfor for første gang, tager på en familietur eller lærer dine børn at fiske, er der uendelige muligheder for at opleve nye færdigheder og eventyr på en campingtur.</p>
             </div>
         </div>
+
+        <%-- Description End --%>
+
     </main>
 </asp:Content>

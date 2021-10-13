@@ -8,6 +8,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
+
+          <%-- Top Image Start --%>
+
         <div class="customContainer">
             <img src="https://www.tcmworld.org/wp-content/uploads/2020/01/be-the-sunshine-scaled.jpg" alt="Notebook">
             <div class="content">
@@ -16,18 +19,20 @@
             </div>
         </div>
 
+         <%-- Top Image End --%>
+
+           <%-- General Info Start --%>
 
         <div class="homeText">
             <h2>General Info</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               man kan tage kontakt til campingpladsen ved enten at ringe eller sende en e-mail til receptionen og bestille enten en plads til en campingvogn/autocamper inklusiv strøm og brug af pladsens faciliteter. Man kan også vælge at bestille en af hytterne hvis de er ledige hvilket naturligvis også er inklusive strøm og faciliteter.
+For at kunne lave en fuld
             </p>
 
         </div>
+
+         <%-- General Info End --%>
+
     </main>
 </asp:Content>
