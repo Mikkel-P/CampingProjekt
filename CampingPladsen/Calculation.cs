@@ -16,13 +16,19 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
-        private DataTable dateTable = new DataTable();
+        private DataTable dateTableData = new DataTable();
 
-        private DataTable personPriceTable = new DataTable();
+        private DataTable personPriceTableData = new DataTable();
 
-        private DataTable spotPriceTable = new DataTable();
+        private DataTable spotPriceTableData = new DataTable();
 
-        private DataTable additionalPriceData = new DataTable();
+        private DataTable additionalPriceTableData = new DataTable();
+
+        private DataTable personAmountTableData = new DataTable();
+
+        private DataTable spotAmountTableData = new DataTable();
+
+        private DataTable additionalAmountTableData = new DataTable();
 
         DateTime hSeason1 = new DateTime(2021, 6, 14);
 
@@ -30,36 +36,19 @@ namespace CampingProjekt
 
         // Make views to extract price information
 
-        private void DateExtract()
-        {
-            newCon = manager.NewConMan();
-            newCon.Open();
-
-            string query = "SELECT * FROM ViewName";
-
-            SqlCommand getDates = new SqlCommand(query, newCon);
-
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(getDates);
-
-            dataAdapt.Fill(dateTable);
-
-            dataAdapt.Dispose();
-
-            newCon.Close();
-        }
-
         public void GetDateData()
         {
             newCon = manager.NewConMan();
             newCon.Open();
 
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
             string query = "SELECT * FROM ViewName";
 
             SqlCommand getRsvID = new SqlCommand(query, newCon);
 
             SqlDataAdapter dataAdapt = new SqlDataAdapter(getRsvID);
 
-            dataAdapt.Fill(dateTable);
+            dataAdapt.Fill(dateTableData);
 
             dataAdapt.Dispose();
 
@@ -99,13 +88,14 @@ namespace CampingProjekt
             newCon = manager.NewConMan();
             newCon.Open();
 
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
             string query = "SELECT * FROM ViewName";
 
             SqlCommand getPersonPrice = new SqlCommand(query, newCon);
 
             SqlDataAdapter dataAdapt = new SqlDataAdapter(getPersonPrice);
 
-            dataAdapt.Fill(dateTable);
+            dataAdapt.Fill(personPriceTableData);
 
             dataAdapt.Dispose();
 
@@ -145,13 +135,14 @@ namespace CampingProjekt
             newCon = manager.NewConMan();
             newCon.Open();
 
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
             string query = "SELECT * FROM ViewName";
 
             SqlCommand getSpotPrice = new SqlCommand(query, newCon);
 
             SqlDataAdapter dataAdapt = new SqlDataAdapter(getSpotPrice);
 
-            dataAdapt.Fill(dateTable);
+            dataAdapt.Fill(spotPriceTableData);
 
             dataAdapt.Dispose();
 
@@ -191,13 +182,14 @@ namespace CampingProjekt
             newCon = manager.NewConMan();
             newCon.Open();
 
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
             string query = "SELECT * FROM ViewName";
 
             SqlCommand getAdditionalPrice = new SqlCommand(query, newCon);
 
             SqlDataAdapter dataAdapt = new SqlDataAdapter(getAdditionalPrice);
 
-            dataAdapt.Fill(dateTable);
+            dataAdapt.Fill(additionalPriceTableData);
 
             dataAdapt.Dispose();
 
@@ -232,14 +224,122 @@ namespace CampingProjekt
             return data;
         }
 
-        private void GetAmounts()
+        private void GetPersonAmount()
         {
+            newCon = manager.NewConMan();
+            newCon.Open();
 
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
+            string query = "SELECT * FROM ViewName";
+
+            SqlCommand getAmounts = new SqlCommand(query, newCon);
+
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAmounts);
+
+            dataAdapt.Fill(personAmountTableData);
+
+            dataAdapt.Dispose();
+
+            newCon.Close();
+        }
+
+        private string FillPersonAmount(DataTable personAmountTable)
+        {
+            string data = string.Empty;
+
+            StringBuilder holder = new StringBuilder();
+
+            // Commences if the table exists and has atleast 1 row in it
+            if (null != personAmountTable && null != personAmountTable.Rows)
+            {
+                // Loops through the rows belonging to the given table
+                foreach (DataRow dataRow in personAmountTable.Rows)
+                {
+                    // Gets and sets all of the values in the datatable to an array
+                    foreach (var item in dataRow.ItemArray)
+                    {
+                        // Adds values to the array, seperates each value by a comma
+                        holder.Append(item);
+                        holder.Append(',');
+                    }
+                    // Terminates the append operation
+                    holder.AppendLine();
+                }
+                // Converts the array to a string
+                data = holder.ToString();
+            }
+            return data;
+        }
+
+        private void GetSpotAmount()
+        {
+            newCon = manager.NewConMan();
+            newCon.Open();
+
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
+            string query = "SELECT * FROM ViewName";
+
+            SqlCommand getAmounts = new SqlCommand(query, newCon);
+
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAmounts);
+
+            dataAdapt.Fill(spotAmountTableData);
+
+            dataAdapt.Dispose();
+
+            newCon.Close();
+        }
+
+        private string FillSpotAmount(DataTable spotAmountTable)
+        {
+            string data = string.Empty;
+
+            StringBuilder holder = new StringBuilder();
+
+            // Commences if the table exists and has atleast 1 row in it
+            if (null != spotAmountTable && null != spotAmountTable.Rows)
+            {
+                // Loops through the rows belonging to the given table
+                foreach (DataRow dataRow in spotAmountTable.Rows)
+                {
+                    // Gets and sets all of the values in the datatable to an array
+                    foreach (var item in dataRow.ItemArray)
+                    {
+                        // Adds values to the array, seperates each value by a comma
+                        holder.Append(item);
+                        holder.Append(',');
+                    }
+                    // Terminates the append operation
+                    holder.AppendLine();
+                }
+                // Converts the array to a string
+                data = holder.ToString();
+            }
+            return data;
+        }
+
+        private void GetAdditionalAmount()
+        {
+            newCon = manager.NewConMan();
+            newCon.Open();
+
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
+            string query = "SELECT * FROM ViewName";
+
+            SqlCommand getAmounts = new SqlCommand(query, newCon);
+
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAmounts);
+
+            dataAdapt.Fill(additionalAmountTableData);
+
+            dataAdapt.Dispose();
+
+            newCon.Close();
         }
 
         public void PriceCalc()
         {
-            string temp = FillDateData(dateTable);
+            string temp = FillDateData(dateTableData);
             string[] dateHolder = temp.Split(',');
             string aDate = dateHolder[0];
 
@@ -248,8 +348,32 @@ namespace CampingProjekt
             Convert.ToDateTime(hSeason1);
             Convert.ToDateTime(hSeason2);
 
-            string price = FillPersonPriceData(personPriceTable);
-            string[] priceHolder = price.Split(',');
+            // Læg mærke til rækkefølgen som dataen bliver extracted i
+            string personPrice = FillPersonPriceData(personPriceTableData);
+            string[] personPriceHolder = personPrice.Split(',');
+            string barnPrice = personPriceHolder[0];
+            string hundPrice = personPriceHolder[1];
+            string voksenPrice = personPriceHolder[2];
+
+            string spotPrice = FillSpotData(spotPriceTableData);
+            string[] spotPriceHolder = spotPrice.Split(',');
+            string fall = spotPriceHolder[0];
+            string spring = spotPriceHolder[1];
+            string cpLille = spotPriceHolder[2];
+            string lukHytte = spotPriceHolder[3];
+            string summer = spotPriceHolder[4];
+            string standHytte = spotPriceHolder[5];
+            string cpStor = spotPriceHolder[6];
+            string telt = spotPriceHolder[7];
+            string winter = spotPriceHolder[8];
+
+            string additionalPrices = FillAdditionalPrice(additionalPriceTableData);
+            string[] additionalPricesHolder = additionalPrices.Split(',');
+            string badeBarn = additionalPricesHolder[0];
+            string badeVoksen = additionalPricesHolder[1];
+            string cykelLeje = additionalPricesHolder[3];
+            string ren = additionalPricesHolder[4];
+            string sengeLinned = additionalPricesHolder[5];
 
 
 
