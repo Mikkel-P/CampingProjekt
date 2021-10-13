@@ -50,21 +50,11 @@
                     <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <WeekendDayStyle BackColor="#FFFFCC" />
                 </asp:Calendar>
-
-              
-
-            </div>
-            
-              </div>
-            </div>
-            
-
+            </div>  
+       </div>
+   </div>
+         
             <br />
-
-           
-        
-                <div class="col-xs-6">                 
-                     
 
             <asp:Image ID="Image1" runat="server" Height="98px" Width="815px" ImageUrl="https://image.freepik.com/free-vector/camping-horizontal-background-night-cartoon-style_96318-819.jpg" ImageAlign="Left"/>
              <h1 style="color: #FFFFFF; background-color: #C0C0C0;">Reservation</h1>
@@ -144,24 +134,8 @@
             </div>
              
                 </div>
-            </div>
-
-           <asp:gridview id="CustomersGridView" 
-        datasourceid="CustomersSource" 
-        autogeneratecolumns="true"
-        emptydatatext="No data available." 
-        runat="server">
-        
-        <columns>
-          <asp:boundfield datafield="CustomerID" headertext="Customer ID"/>
-          <asp:boundfield datafield="CompanyName" headertext="Company Name"/>
-          <asp:boundfield datafield="Address" headertext="Address"/>
-          <asp:boundfield datafield="City" headertext="City"/>
-          <asp:boundfield datafield="PostalCode" headertext="Postal Code"/>
-          <asp:boundfield datafield="Country" headertext="Country"/>
-        </columns>
-                
-      </asp:gridview>
+            
+          
 
              <div class="row">
                 <div class="col-xs-6">
@@ -170,7 +144,6 @@
                     <asp:TextBox type="text" class="form-control" ID="email" runat="server" />
                 </div>
                 <div class="col-xs-6">
-                    
                     <asp:TextBox type="text" class="form-control" ID="number" runat="server" />
                 </div>
             </div>
