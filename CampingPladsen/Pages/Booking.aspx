@@ -3,7 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/BookingSS.css" rel="stylesheet" type="text/css" />
     <link href="CSS/RootSS.css" rel="stylesheet" type="text/css" />
-    <link href="CSS/MasterSS.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/MasterSS.css" rel="stylesheet" type="text/css" /> 
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
@@ -163,7 +164,11 @@
                     <asp:Label ID="Password" runat="server" Text="Password: "></asp:Label>
                     <asp:TextBox ID="passwordInput" runat="server"></asp:TextBox>
                 </div>
+                  <a href="../Pages/ReceiptPage.aspx" class="button" style="background-color: #808080; color: #FFFFFF;">Submit</a>
             </div>
-                
+        
+        
+             
+        
     </main>
 </asp:Content>
