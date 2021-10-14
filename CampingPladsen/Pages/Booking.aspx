@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Booking" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Booking.aspx.cs" Inherits="CampingProjekt.Pages.Booking" %>
+<%@ Page Title="Booking" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Booking.aspx.cs" Inherits="CampingProjekt.Pages.Booking" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="CSS/BookingSS.css" rel="stylesheet" type="text/css" />
@@ -153,7 +153,7 @@
                 </div>
                 <div>
                     <asp:Label ID="Postnummer" runat="server" Text="Postnummer: "></asp:Label>
-                    <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="postNrInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
                     <asp:Label ID="Email" runat="server" Text="Email: "></asp:Label>

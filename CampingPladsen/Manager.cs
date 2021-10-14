@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -10,8 +7,6 @@ namespace CampingProjekt
 {
     public class Manager
     {
-        // Gemme alle værdier inden de sendes til DB, lav reservation først, så vi får et reservations_id, og tilføj så værdier til tabellerne
-
         public Manager() { }
 
         Dal dal = new Dal();
@@ -20,19 +15,27 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
-        private DataTable dataTable = new DataTable();
+        public DataTable dataTable = new DataTable();
 
+        /// <summary>
+        /// Calls on the dal method to open a connection to the database.
+        /// </summary>
+        /// <returns></returns>
         public SqlConnection NewConMan()
         {
             return dal.NewConDal();
         }
 
+        /// <summary>
+        /// Submits the date input to the database.
+        /// </summary>
+        /// <param name="aDate"></param>
+        /// <param name="eDate"></param>
         public void DateSubmit(string aDate, string eDate)
         {
             newCon = NewConMan();
             newCon.Open();
 
-            // The right way
             SqlCommand insertArrival = new SqlCommand("StoredProcedure", newCon);
             SqlCommand insertExit = new SqlCommand("StoredProcedure", newCon);
 
@@ -45,12 +48,15 @@ namespace CampingProjekt
             newCon.Close();
         }
 
+        /// <summary>
+        /// Gets the reservation_id associated with the date submission.
+        /// </summary>
         public void GetRsvID()
         {
             newCon = NewConMan();
             newCon.Open();
 
-            string query = "SELECT * FROM ViewName";
+            string query = "SELECT * FROM RsvID-View";
 
             SqlCommand getRsvID = new SqlCommand(query, newCon);
 
@@ -63,6 +69,11 @@ namespace CampingProjekt
             newCon.Close();
         }
 
+        /// <summary>
+        /// Inserts the reservation_id into a table which we can extract the value from.
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public string GetTableData(DataTable table)
         {
             string data = string.Empty;
@@ -91,6 +102,28 @@ namespace CampingProjekt
             return data;
         }
 
+        #region Stored Procedure Methods
+        // Could easily be optimized with an array
+        /// <summary>
+        /// Sends the amount user input to the database.
+        /// </summary>
+        /// <param name="antalV"></param>
+        /// <param name="antalB"></param>
+        /// <param name="antalH"></param>
+        /// <param name="antalCPS"></param>
+        /// <param name="antalCPL"></param>
+        /// <param name="antalT"></param>
+        /// <param name="antalLH"></param>
+        /// <param name="antalSH"></param>
+        /// <param name="antalSF"></param>
+        /// <param name="antalSS"></param>
+        /// <param name="antalSE"></param>
+        /// <param name="antalSV"></param>
+        /// <param name="badeBilletV"></param>
+        /// <param name="badeBilletB"></param>
+        /// <param name="cykelL"></param>
+        /// <param name="ren"></param>
+        /// <param name="sengeL"></param>
         public void InputSubmit
             (int antalV, int antalB, int antalH, int antalCPS, int antalCPL, int antalT, int antalLH, int antalSH, int antalSF,
             int antalSS, int antalSE, int antalSV, int badeBilletV, int badeBilletB, int cykelL, int ren, int sengeL)
@@ -102,7 +135,6 @@ namespace CampingProjekt
 
             int rsvID = Convert.ToInt32(temp);
 
-            // The right way
             SqlCommand insertRsvID = new SqlCommand("InputInsertion", newCon);
             insertRsvID.Parameters.AddWithValue("@RsvID", rsvID);
 
@@ -175,6 +207,66 @@ namespace CampingProjekt
             insertSL.ExecuteNonQuery();
 
             newCon.Close();
+        }
+
+        // Could be optimized with an array for each data type
+        /// <summary>
+        /// Sends the personal information user input to the database.
+        /// </summary>
+        /// <param name="cpr"></param>
+        /// <param name="fornavn"></param>
+        /// <param name="efternavn"></param>
+        /// <param name="vejnavn"></param>
+        /// <param name="husNr"></param>
+        /// <param name="postNr"></param>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        public void PersonalInfoSubmit(string cpr, string fornavn, string efternavn, string vejnavn, int husNr, int postNr, string email, string password)
+        {
+            SqlCommand insertCpr = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertCpr.Parameters.AddWithValue("@CprInput", cpr);
+            insertCpr.ExecuteNonQuery();
+
+            SqlCommand insertfornavn = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertfornavn.Parameters.AddWithValue("@FornavnInput", fornavn);
+            insertfornavn.ExecuteNonQuery();
+
+            SqlCommand insertEfternavn = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertEfternavn.Parameters.AddWithValue("@EfternavnInput", efternavn);
+            insertEfternavn.ExecuteNonQuery();
+
+            SqlCommand insertVejnavn = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertVejnavn.Parameters.AddWithValue("@VejnavnInput", vejnavn);
+            insertVejnavn.ExecuteNonQuery();
+
+            SqlCommand insertHusNr = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertHusNr.Parameters.AddWithValue("@HusNrInput", husNr);
+            insertHusNr.ExecuteNonQuery();
+
+            SqlCommand insertPostNr = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertPostNr.Parameters.AddWithValue("@PostNrInput", postNr);
+            insertPostNr.ExecuteNonQuery();
+
+            SqlCommand insertEmail = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertEmail.Parameters.AddWithValue("@EmailInput", email);
+            insertEmail.ExecuteNonQuery();
+
+            SqlCommand insertPassword = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertPassword.Parameters.AddWithValue("@PasswordInput", password);
+            insertPassword.ExecuteNonQuery();
+        }
+        #endregion
+
+        /// <summary>
+        /// Inserts the total price into a table in the database, which we can extract with a view later on.
+        /// </summary>
+        public void PriceInsertion()
+        {
+            int totalPris =  calc.PriceCalc();
+
+            SqlCommand insertTotalPris = new SqlCommand("TotalPriceInput", newCon);
+            insertTotalPris.Parameters.AddWithValue("@TotalPrice", totalPris);
+            insertTotalPris.ExecuteNonQuery();
         }
     }
 }

@@ -100,66 +100,84 @@ C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\Cam
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CoreCompileInputs.cache
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.dll
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.pdb
-C:\ZBC\CampingProjekt\CampingPladsen\bin\CampingProjekt.dll.config
-C:\ZBC\CampingProjekt\CampingPladsen\bin\CampingProjekt.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\CampingProjekt.pdb
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\csc.exe
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\csc.exe.config
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\csc.rsp
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\csi.exe
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\csi.exe.config
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\csi.rsp
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Managed.Core.targets
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Win32.Primitives.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.AppContext.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Buffers.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Collections.Immutable.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Console.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Globalization.Calendars.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.ZipFile.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Memory.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Http.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Sockets.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Numerics.Vectors.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Reflection.Metadata.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Encoding.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Text.Encoding.CodePages.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Threading.Tasks.Extensions.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.ValueTuple.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.ReaderWriter.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XmlDocument.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.XDocument.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\vbc.exe
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\vbc.exe.config
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\vbc.rsp
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe
-C:\ZBC\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe.config
-C:\ZBC\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\ZBC\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\ZBC\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.AssemblyReference.cache
-C:\ZBC\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CoreCompileInputs.cache
-C:\ZBC\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CopyComplete
-C:\ZBC\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.dll
-C:\ZBC\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.pdb
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\CampingProjekt.dll.config
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\CampingProjekt.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\CampingProjekt.pdb
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\csc.exe
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\csc.exe.config
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\csc.rsp
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\csi.exe
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\csi.exe.config
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\csi.rsp
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.AppContext.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Buffers.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Console.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Memory.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Http.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\vbc.exe
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\vbc.exe.config
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\vbc.rsp
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.AppContext.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Console.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Http.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.XDocument.dll

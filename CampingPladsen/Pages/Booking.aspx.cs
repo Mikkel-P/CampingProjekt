@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Data.Sql;
-using System.Data.SqlClient;
 
 namespace CampingProjekt.Pages
 {
@@ -24,62 +17,67 @@ namespace CampingProjekt.Pages
             manager.DateSubmit(aDate, eDate);
         }
 
-        protected void TextBoxInput()
+        protected void TextBoxAmountInput()
         {
-            string antalVoksne = VoksenInput.Text;
-            int antalV = Convert.ToInt32(antalVoksne);
+            int antalV = Convert.ToInt32(VoksenInput.Text);
 
-            string antalBørn = BarnInput.Text;
-            int antalB = Convert.ToInt32(antalBørn);
+            int antalB = Convert.ToInt32(BarnInput.Text);
 
-            string antalHunde = HundeInput.Text;
-            int antalH = Convert.ToInt32(antalHunde);
+            int antalH = Convert.ToInt32(HundeInput.Text);
 
-            string antalCPstor = StorCpInput.Text;
-            int antalCPS = Convert.ToInt32(antalCPstor);
+            int antalCPS = Convert.ToInt32(StorCpInput.Text);
 
-            string antalCPlille = LilleCpInput.Text;
-            int antalCPL = Convert.ToInt32(antalCPlille);
+            int antalCPL = Convert.ToInt32(LilleCpInput.Text);
 
-            string antalTelte = TeltInput.Text;
-            int antalT = Convert.ToInt32(antalTelte);
+            int antalT = Convert.ToInt32(TeltInput.Text);
 
-            string antalLHytte = LukHytInput.Text;
-            int antalLH = Convert.ToInt32(antalLHytte);
+            int antalLH = Convert.ToInt32(LukHytInput.Text);
 
-            string antalSHytte = StandHytInput.Text;
-            int antalSH = Convert.ToInt32(antalSHytte);
+            int antalSH = Convert.ToInt32(StandHytInput.Text);
 
-            string sæsonF = ForInput.Text;
-            int antalSF = Convert.ToInt32(sæsonF);
+            int antalSF = Convert.ToInt32(ForInput.Text);
 
-            string sæsonS = SommerInput.Text;
-            int antalSS = Convert.ToInt32(sæsonS);
+            int antalSS = Convert.ToInt32(SommerInput.Text);
 
-            string sæsonE = EfterInput.Text;
-            int antalSE = Convert.ToInt32(sæsonE);
+            int antalSE = Convert.ToInt32(EfterInput.Text);
 
-            string sæsonV = VinterInput.Text;
-            int antalSV = Convert.ToInt32(sæsonV);
+            int antalSV = Convert.ToInt32(VinterInput.Text);
 
-            string badeBilletVoksen = BadeVoksenInput.Text;
-            int badeBilletV = Convert.ToInt32(badeBilletVoksen);
+            int badeBilletV = Convert.ToInt32(BadeVoksenInput.Text);
 
-            string badeBilletBarn = BadeBarnInput.Text;
-            int badeBilletB = Convert.ToInt32(badeBilletBarn);
+            int badeBilletB = Convert.ToInt32(BadeBarnInput.Text);
 
-            string cykelleje = CykelInput.Text;
-            int cykelL = Convert.ToInt32(cykelleje);
+            int cykelL = Convert.ToInt32(CykelInput.Text);
 
-            string rengøring = RenInput.Text;
-            int ren = Convert.ToInt32(rengøring);
+            int ren = Convert.ToInt32(RenInput.Text);
 
-            string sengelinned = SengeInput.Text;
-            int sengeL = Convert.ToInt32(sengelinned);
+            int sengeL = Convert.ToInt32(SengeInput.Text);
 
+            // Could easily be optimized with an array
             manager.InputSubmit
                 (antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH, 
                 antalSF, antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
+        }
+
+        protected void PersonalInfoInput()
+        {
+            string cpr = cprInput.Text;
+
+            string fornavn = fornavnInput.Text;
+
+            string efternavn = efternavnInput.Text;
+
+            string vejnavn = vejnavnInput.Text;
+
+            int husNr = Convert.ToInt32(husNrInput.Text);
+
+            int postNr = Convert.ToInt32(postNrInput);
+
+            string email = emailInput.Text;
+
+            string password = passwordInput.Text;
+
+            manager.PersonalInfoSubmit(cpr, fornavn, efternavn, vejnavn, husNr, postNr, email, password);
         }
     }
 }
