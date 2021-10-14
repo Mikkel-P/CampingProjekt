@@ -61,7 +61,7 @@ namespace CampingProjekt.Pages
 
         protected void PersonalInfoInput()
         {
-            int cpr = Convert.ToInt32(cprInput.Text);
+            string cpr = cprInput.Text;
 
             string fornavn = fornavnInput.Text;
 

@@ -27,7 +27,6 @@ namespace CampingProjekt
             newCon = NewConMan();
             newCon.Open();
 
-            // The right way
             SqlCommand insertArrival = new SqlCommand("StoredProcedure", newCon);
             SqlCommand insertExit = new SqlCommand("StoredProcedure", newCon);
 
@@ -40,13 +39,12 @@ namespace CampingProjekt
             newCon.Close();
         }
 
-        // Make view for this method
         public void GetRsvID()
         {
             newCon = NewConMan();
             newCon.Open();
 
-            string query = "SELECT * FROM ViewName";
+            string query = "SELECT * FROM RsvID-View";
 
             SqlCommand getRsvID = new SqlCommand(query, newCon);
 
@@ -87,6 +85,7 @@ namespace CampingProjekt
             return data;
         }
 
+        #region Stored Procedure Methods
         // Could easily be optimized with an array
         public void InputSubmit
             (int antalV, int antalB, int antalH, int antalCPS, int antalCPL, int antalT, int antalLH, int antalSH, int antalSF,
@@ -99,7 +98,6 @@ namespace CampingProjekt
 
             int rsvID = Convert.ToInt32(temp);
 
-            // The right way
             SqlCommand insertRsvID = new SqlCommand("InputInsertion", newCon);
             insertRsvID.Parameters.AddWithValue("@RsvID", rsvID);
 
@@ -174,48 +172,52 @@ namespace CampingProjekt
             newCon.Close();
         }
 
-        // Make a stored procedure for this
         // Could be optimized with an array for each data type
-        public void PersonalInfoSubmit(int cpr, string fornavn, string efternavn, string vejnavn, int husNr, int postNr, string email, string password)
+        public void PersonalInfoSubmit(string cpr, string fornavn, string efternavn, string vejnavn, int husNr, int postNr, string email, string password)
         {
-            // The right way
-            SqlCommand insertCpr = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertCpr = new SqlCommand("PersonalInfoInsertion", newCon);
             insertCpr.Parameters.AddWithValue("@CprInput", cpr);
             insertCpr.ExecuteNonQuery();
 
-            SqlCommand insertfornavn = new SqlCommand("StoredProcedure", newCon);
-            insertfornavn.Parameters.AddWithValue("@fornavnInput", fornavn);
+            SqlCommand insertfornavn = new SqlCommand("PersonalInfoInsertion", newCon);
+            insertfornavn.Parameters.AddWithValue("@FornavnInput", fornavn);
             insertfornavn.ExecuteNonQuery();
 
-            SqlCommand insertEfternavn = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertEfternavn = new SqlCommand("PersonalInfoInsertion", newCon);
             insertEfternavn.Parameters.AddWithValue("@EfternavnInput", efternavn);
             insertEfternavn.ExecuteNonQuery();
 
-            SqlCommand insertVejnavn = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertVejnavn = new SqlCommand("PersonalInfoInsertion", newCon);
             insertVejnavn.Parameters.AddWithValue("@VejnavnInput", vejnavn);
             insertVejnavn.ExecuteNonQuery();
 
-            SqlCommand insertHusNr = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertHusNr = new SqlCommand("PersonalInfoInsertion", newCon);
             insertHusNr.Parameters.AddWithValue("@HusNrInput", husNr);
             insertHusNr.ExecuteNonQuery();
 
-            SqlCommand insertPostNr = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertPostNr = new SqlCommand("PersonalInfoInsertion", newCon);
             insertPostNr.Parameters.AddWithValue("@PostNrInput", postNr);
             insertPostNr.ExecuteNonQuery();
 
-            SqlCommand insertEmail = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertEmail = new SqlCommand("PersonalInfoInsertion", newCon);
             insertEmail.Parameters.AddWithValue("@EmailInput", email);
             insertEmail.ExecuteNonQuery();
 
-            SqlCommand insertPassword = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertPassword = new SqlCommand("PersonalInfoInsertion", newCon);
             insertPassword.Parameters.AddWithValue("@PasswordInput", password);
             insertPassword.ExecuteNonQuery();
         }
+        #endregion
 
         // Call on this from the ui that should display total price
-        public int PriceMover()
+        public void PriceInsertion()
         {
-            return calc.PriceCalc();
+            // RET
+            int totalPris =  calc.PriceCalc();
+
+            SqlCommand insertTotalPris = new SqlCommand("TotalPriceInput", newCon);
+            insertTotalPris.Parameters.AddWithValue("@TotalPrice", totalPris);
+            insertTotalPris.ExecuteNonQuery();
         }
     }
 }

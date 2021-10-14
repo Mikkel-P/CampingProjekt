@@ -80,7 +80,7 @@
     <Content Include="Pages\CreateUser.aspx" />
     <Content Include="Pages\Faciliteter.aspx" />
     <Content Include="Pages\LogIn.aspx" />
-    <Content Include="Pages\TestPage.aspx" />
+    <Content Include="Pages\ReceiptPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -136,12 +136,12 @@
     <Compile Include="Pages\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TestPage.aspx.cs">
-      <DependentUpon>TestPage.aspx</DependentUpon>
+    <Compile Include="Pages\ReceiptPage.aspx.cs">
+      <DependentUpon>ReceiptPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\TestPage.aspx.designer.cs">
-      <DependentUpon>TestPage.aspx</DependentUpon>
+    <Compile Include="Pages\ReceiptPage.aspx.designer.cs">
+      <DependentUpon>ReceiptPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

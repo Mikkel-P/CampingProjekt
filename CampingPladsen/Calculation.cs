@@ -35,7 +35,7 @@ namespace CampingProjekt
         #endregion
 
         // Gets the newest reservation id 
-        private int RsvID ()
+        public int RsvID ()
         {
             string temp = manager.GetTableData(manager.dataTable);
             int rsvID = Convert.ToInt32(temp);
@@ -63,7 +63,6 @@ namespace CampingProjekt
             newCon.Close();
         }
 
-        // Make views to extract price information
         #region SQL View Methods
         private string FillDateData(DataTable dateTable)
         {
@@ -99,7 +98,7 @@ namespace CampingProjekt
             newCon.Open();
 
             // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = "SELECT * FROM ViewName";
+            string query = "SELECT * FROM PersonPrices-View";
 
             SqlCommand getPersonPrice = new SqlCommand(query, newCon);
 
@@ -145,10 +144,8 @@ namespace CampingProjekt
             newCon = manager.NewConMan();
             newCon.Open();
 
-            int rsvID = RsvID();
-
             // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = "SELECT * FROM ViewName";
+            string query = "SELECT * FROM SpotPrices-View";
 
             SqlCommand getSpotPrice = new SqlCommand(query, newCon);
 
@@ -194,10 +191,8 @@ namespace CampingProjekt
             newCon = manager.NewConMan();
             newCon.Open();
 
-            int rsvID = RsvID();
-
             // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = "SELECT * FROM ViewName";
+            string query = "SELECT * FROM AdditionalPrices-View";
 
             SqlCommand getAdditionalPrice = new SqlCommand(query, newCon);
 
