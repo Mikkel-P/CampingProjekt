@@ -62,7 +62,7 @@ namespace CampingProjekt.Pages
 
             // Could easily be optimized with an array
             manager.InputSubmit
-                (antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH, 
+                (antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH,
                 antalSF, antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
         }
 
@@ -88,6 +88,18 @@ namespace CampingProjekt.Pages
             string password = passwordInput.Text;
 
             manager.PersonalInfoSubmit(cpr, fornavn, efternavn, vejnavn, husNr, postNr, email, password);
+        }
+        #endregion
+
+        #region Submit button
+        /// <summary>
+        /// Executes the above methods to submit the information collected on the booking page.
+        /// </summary>
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            DateInput();
+            TextBoxAmountInput();
+            PersonalInfoInput();            
         }
         #endregion
     }

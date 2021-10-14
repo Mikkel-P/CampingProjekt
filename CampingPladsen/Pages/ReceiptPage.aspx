@@ -9,7 +9,7 @@
         <br />
 
         
-        <h1 style="color: #FFFFFF; background-color: #666666; position: page; width: 900px; height: 100px; text-align: center;">Din Reservation er blevet Booket</h1>
+        <h1 style="color: #FFFFFF; background-color: #666666; position: page; width: 900px; height: 100px; text-align: center;">Din reservation er nu oprettet i systemet. Kvittering sendes til den tilknyttede email.</h1>
 
         <br />
         <br />
