@@ -17,11 +17,20 @@ namespace CampingProjekt
 
         public DataTable dataTable = new DataTable();
 
+        /// <summary>
+        /// Calls on the dal method to open a connection to the database.
+        /// </summary>
+        /// <returns></returns>
         public SqlConnection NewConMan()
         {
             return dal.NewConDal();
         }
 
+        /// <summary>
+        /// Submits the date input to the database.
+        /// </summary>
+        /// <param name="aDate"></param>
+        /// <param name="eDate"></param>
         public void DateSubmit(string aDate, string eDate)
         {
             newCon = NewConMan();
@@ -39,6 +48,9 @@ namespace CampingProjekt
             newCon.Close();
         }
 
+        /// <summary>
+        /// Gets the reservation_id associated with the date submission.
+        /// </summary>
         public void GetRsvID()
         {
             newCon = NewConMan();
@@ -57,6 +69,11 @@ namespace CampingProjekt
             newCon.Close();
         }
 
+        /// <summary>
+        /// Inserts the reservation_id into a table which we can extract the value from.
+        /// </summary>
+        /// <param name="table"></param>
+        /// <returns></returns>
         public string GetTableData(DataTable table)
         {
             string data = string.Empty;
@@ -87,6 +104,26 @@ namespace CampingProjekt
 
         #region Stored Procedure Methods
         // Could easily be optimized with an array
+        /// <summary>
+        /// Sends the amount user input to the database.
+        /// </summary>
+        /// <param name="antalV"></param>
+        /// <param name="antalB"></param>
+        /// <param name="antalH"></param>
+        /// <param name="antalCPS"></param>
+        /// <param name="antalCPL"></param>
+        /// <param name="antalT"></param>
+        /// <param name="antalLH"></param>
+        /// <param name="antalSH"></param>
+        /// <param name="antalSF"></param>
+        /// <param name="antalSS"></param>
+        /// <param name="antalSE"></param>
+        /// <param name="antalSV"></param>
+        /// <param name="badeBilletV"></param>
+        /// <param name="badeBilletB"></param>
+        /// <param name="cykelL"></param>
+        /// <param name="ren"></param>
+        /// <param name="sengeL"></param>
         public void InputSubmit
             (int antalV, int antalB, int antalH, int antalCPS, int antalCPL, int antalT, int antalLH, int antalSH, int antalSF,
             int antalSS, int antalSE, int antalSV, int badeBilletV, int badeBilletB, int cykelL, int ren, int sengeL)
@@ -173,6 +210,17 @@ namespace CampingProjekt
         }
 
         // Could be optimized with an array for each data type
+        /// <summary>
+        /// Sends the personal information user input to the database.
+        /// </summary>
+        /// <param name="cpr"></param>
+        /// <param name="fornavn"></param>
+        /// <param name="efternavn"></param>
+        /// <param name="vejnavn"></param>
+        /// <param name="husNr"></param>
+        /// <param name="postNr"></param>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
         public void PersonalInfoSubmit(string cpr, string fornavn, string efternavn, string vejnavn, int husNr, int postNr, string email, string password)
         {
             SqlCommand insertCpr = new SqlCommand("PersonalInfoInsertion", newCon);
@@ -209,10 +257,11 @@ namespace CampingProjekt
         }
         #endregion
 
-        // Call on this from the ui that should display total price
+        /// <summary>
+        /// Inserts the total price into a table in the database, which we can extract with a view later on.
+        /// </summary>
         public void PriceInsertion()
         {
-            // RET
             int totalPris =  calc.PriceCalc();
 
             SqlCommand insertTotalPris = new SqlCommand("TotalPriceInput", newCon);

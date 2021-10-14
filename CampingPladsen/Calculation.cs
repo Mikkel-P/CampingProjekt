@@ -34,7 +34,10 @@ namespace CampingProjekt
         DateTime hSeason2 = new DateTime(2021, 8, 14);
         #endregion
 
-        // Gets the newest reservation id 
+        /// <summary>
+        /// Gets the newest reservation id 
+        /// </summary>
+        /// <returns></returns>
         public int RsvID ()
         {
             string temp = manager.GetTableData(manager.dataTable);
@@ -42,6 +45,9 @@ namespace CampingProjekt
             return rsvID;
         }
 
+        /// <summary>
+        /// Gets the date data from the database
+        /// </summary>
         public void GetDateData()
         {
             newCon = manager.NewConMan();
@@ -64,6 +70,7 @@ namespace CampingProjekt
         }
 
         #region SQL View Methods
+        // Methods that gets table data from the database and inserts it into a datatable which we can extract the values from.
         private string FillDateData(DataTable dateTable)
         {
             string data = string.Empty;
@@ -383,11 +390,20 @@ namespace CampingProjekt
         }
         #endregion
 
+        /// <summary>
+        /// Converts a string to an integer
+        /// </summary>
+        /// <param name="temp"></param>
+        /// <returns></returns>
         private int StringToInt(string temp)
         {
             return Convert.ToInt32(temp);
         }
 
+        /// <summary>
+        /// Collects all the user input that is relevant for the price calculation, then gets the total price associated with the reservation.
+        /// </summary>
+        /// <returns></returns>
         public int PriceCalc()
         {
             #region Date extraction
