@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="CampingDBConnectionString-Web.config Connection String" description="CampingDBConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=172.16.59.46;Initial Catalog=CampingDB;Persist Security Info=True;User ID=sa;Password=Password1234!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\ZBC\\CampingProjekt\\CampingPladsen\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CampingDBConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
