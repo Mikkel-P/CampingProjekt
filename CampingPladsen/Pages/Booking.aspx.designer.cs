@@ -60,13 +60,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox VoksenInput;
 
         /// <summary>
-        /// Børn control.
+        /// Boern control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Børn;
+        protected global::System.Web.UI.WebControls.Label Boern;
 
         /// <summary>
         /// BarnInput control.
@@ -186,13 +186,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox StandHytInput;
 
         /// <summary>
-        /// ForårsSæsonplads control.
+        /// SpringSeasonSpot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ForårsSæsonplads;
+        protected global::System.Web.UI.WebControls.Label SpringSeasonSpot;
 
         /// <summary>
         /// ForInput control.
@@ -204,13 +204,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox ForInput;
 
         /// <summary>
-        /// SommerSæsonplads control.
+        /// SummerSeasonSpot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label SommerSæsonplads;
+        protected global::System.Web.UI.WebControls.Label SummerSeasonSpot;
 
         /// <summary>
         /// SommerInput control.
@@ -222,13 +222,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox SommerInput;
 
         /// <summary>
-        /// EfterårsSæsonplads control.
+        /// FallSeasonSpot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EfterårsSæsonplads;
+        protected global::System.Web.UI.WebControls.Label FallSeasonSpot;
 
         /// <summary>
         /// EfterInput control.
@@ -240,13 +240,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox EfterInput;
 
         /// <summary>
-        /// VinterSæsonplads control.
+        /// WinterSeasonSpot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label VinterSæsonplads;
+        protected global::System.Web.UI.WebControls.Label WinterSeasonSpot;
 
         /// <summary>
         /// VinterInput control.
@@ -276,13 +276,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox BadeVoksenInput;
 
         /// <summary>
-        /// BadelandBørn control.
+        /// Badelandboern control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label BadelandBørn;
+        protected global::System.Web.UI.WebControls.Label Badelandboern;
 
         /// <summary>
         /// BadeBarnInput control.
@@ -312,13 +312,13 @@ namespace CampingProjekt.Pages
         protected global::System.Web.UI.WebControls.TextBox CykelInput;
 
         /// <summary>
-        /// Rengøring control.
+        /// Cleaning control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Rengøring;
+        protected global::System.Web.UI.WebControls.Label Cleaning;
 
         /// <summary>
         /// RenInput control.
@@ -490,14 +490,5 @@ namespace CampingProjekt.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passwordInput;
-
-        /// <summary>
-        /// CustomersGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView CustomersGridView;
     }
 }

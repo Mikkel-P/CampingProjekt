@@ -41,7 +41,7 @@
                     Familieforbindelser: Camping giver dig og din familie en unik mulighed for at oprette forbindelse igen og bruge tid sammen. At lave mad over ilden, fortælle historier under stjernerne og slå sammen på vejen styrker båndene og giver alle en chance for at deltage.
                     <br>
                     <br>
-                    Læringsmuligheder: Uanset om du laver mad udenfor for første gang, tager på en familietur eller lærer dine børn at fiske, er der uendelige muligheder for at opleve nye færdigheder og eventyr på en campingtur.</p>
+                    Læringsmuligheder: Uanset om du laver mad udenfor for første gang, tager på en familietur eller lærer dine boern at fiske, er der uendelige muligheder for at opleve nye færdigheder og eventyr på en campingtur.</p>
             </div>
         </div>
 

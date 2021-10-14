@@ -6,6 +6,10 @@ namespace CampingProjekt.Pages
     {
         Manager manager = new Manager();
 
+        #region Input methods
+        /// <summary>
+        /// Saves the user DateTime input to two seperate strings.
+        /// </summary>
         protected void DateInput()
         {
             DateTime arrivalDate = Calendar1.SelectedDate;
@@ -17,6 +21,9 @@ namespace CampingProjekt.Pages
             manager.DateSubmit(aDate, eDate);
         }
 
+        /// <summary>
+        /// Stores the textbox info concerning amounts, needed for price calculation.
+        /// </summary>
         protected void TextBoxAmountInput()
         {
             int antalV = Convert.ToInt32(VoksenInput.Text);
@@ -59,6 +66,9 @@ namespace CampingProjekt.Pages
                 antalSF, antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
         }
 
+        /// <summary>
+        /// Saves the textbox info concerning personal information, needed to identify individual customer.
+        /// </summary>
         protected void PersonalInfoInput()
         {
             string cpr = cprInput.Text;
@@ -79,5 +89,6 @@ namespace CampingProjekt.Pages
 
             manager.PersonalInfoSubmit(cpr, fornavn, efternavn, vejnavn, husNr, postNr, email, password);
         }
+        #endregion
     }
 }

@@ -9,45 +9,24 @@ namespace CampingProjekt
     {
         public Manager() { }
 
-        Dal dal = new Dal();
-
         Calculation calc = new Calculation();
 
         SqlConnection newCon = new SqlConnection();
 
         public DataTable dataTable = new DataTable();
 
+        #region SQL Connection
         /// <summary>
-        /// Calls on the dal method to open a connection to the database.
+        /// Calls on the calculation method to open a connection to the database.
         /// </summary>
         /// <returns></returns>
         public SqlConnection NewConMan()
         {
-            return dal.NewConDal();
+            return calc.NewConCalc();
         }
+        #endregion
 
-        /// <summary>
-        /// Submits the date input to the database.
-        /// </summary>
-        /// <param name="aDate"></param>
-        /// <param name="eDate"></param>
-        public void DateSubmit(string aDate, string eDate)
-        {
-            newCon = NewConMan();
-            newCon.Open();
-
-            SqlCommand insertArrival = new SqlCommand("StoredProcedure", newCon);
-            SqlCommand insertExit = new SqlCommand("StoredProcedure", newCon);
-
-            insertArrival.Parameters.AddWithValue("@Calendar1", aDate);
-            insertExit.Parameters.AddWithValue("@Calendar2", eDate);
-
-            insertArrival.ExecuteNonQuery();
-            insertExit.ExecuteNonQuery();
-
-            newCon.Close();
-        }
-
+        #region View method
         /// <summary>
         /// Gets the reservation_id associated with the date submission.
         /// </summary>
@@ -68,7 +47,9 @@ namespace CampingProjekt
 
             newCon.Close();
         }
+        #endregion
 
+        #region Data extraction method
         /// <summary>
         /// Inserts the reservation_id into a table which we can extract the value from.
         /// </summary>
@@ -101,8 +82,31 @@ namespace CampingProjekt
             }
             return data;
         }
+        #endregion
 
         #region Stored Procedure Methods
+        /// <summary>
+        /// Submits the date input to the database.
+        /// </summary>
+        /// <param name="aDate"></param>
+        /// <param name="eDate"></param>
+        public void DateSubmit(string aDate, string eDate)
+        {
+            newCon = NewConMan();
+            newCon.Open();
+
+            SqlCommand insertArrival = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertExit = new SqlCommand("StoredProcedure", newCon);
+
+            insertArrival.Parameters.AddWithValue("@Calendar1", aDate);
+            insertExit.Parameters.AddWithValue("@Calendar2", eDate);
+
+            insertArrival.ExecuteNonQuery();
+            insertExit.ExecuteNonQuery();
+
+            newCon.Close();
+        }
+
         // Could easily be optimized with an array
         /// <summary>
         /// Sends the amount user input to the database.
@@ -255,7 +259,6 @@ namespace CampingProjekt
             insertPassword.Parameters.AddWithValue("@PasswordInput", password);
             insertPassword.ExecuteNonQuery();
         }
-        #endregion
 
         /// <summary>
         /// Inserts the total price into a table in the database, which we can extract with a view later on.
@@ -268,5 +271,6 @@ namespace CampingProjekt
             insertTotalPris.Parameters.AddWithValue("@TotalPrice", totalPris);
             insertTotalPris.ExecuteNonQuery();
         }
+        #endregion
     }
 }

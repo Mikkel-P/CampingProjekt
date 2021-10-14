@@ -68,7 +68,7 @@
                     <asp:TextBox ID=VoksenInput runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="Børn" runat="server" Text="Antal børn: "></asp:Label>
+                    <asp:Label ID="Boern" runat="server" Text="Antal boern: "></asp:Label>
                     <asp:TextBox ID="BarnInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
@@ -96,19 +96,19 @@
                     <asp:TextBox ID="StandHytInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="ForårsSæsonplads" runat="server" Text="Forårs sæsonplads: "></asp:Label>
+                    <asp:Label ID="SpringSeasonSpot" runat="server" Text="Foraars saesonplads: "></asp:Label>
                     <asp:TextBox ID="ForInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="SommerSæsonplads" runat="server" Text="Sommer sæsonplads: "></asp:Label>
+                    <asp:Label ID="SummerSeasonSpot" runat="server" Text="Sommer saesonplads: "></asp:Label>
                     <asp:TextBox ID="SommerInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="EfterårsSæsonplads" runat="server" Text="Efterårs sæsonplads: "></asp:Label>
+                    <asp:Label ID="FallSeasonSpot" runat="server" Text="Efteraars saesonplads: "></asp:Label>
                     <asp:TextBox ID="EfterInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="VinterSæsonplads" runat="server" Text="Vinter sæsonplads: "></asp:Label>
+                    <asp:Label ID="WinterSeasonSpot" runat="server" Text="Vinter saesonplads: "></asp:Label>
                     <asp:TextBox ID="VinterInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
@@ -116,7 +116,7 @@
                     <asp:TextBox ID="BadeVoksenInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="BadelandBørn" runat="server" Text="24 timers badelandsbillet: (Børn) "></asp:Label>
+                    <asp:Label ID="Badelandboern" runat="server" Text="24 timers badelandsbillet: (boern) "></asp:Label>
                     <asp:TextBox ID="BadeBarnInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
@@ -124,7 +124,7 @@
                     <asp:TextBox ID="CykelInput" runat="server"></asp:TextBox>
                 </div>
                 <div>
-                    <asp:Label ID="Rengøring" runat="server" Text="Rengøring: (Hytter) "></asp:Label>
+                    <asp:Label ID="Cleaning" runat="server" Text="Rengoering: (Hytter) "></asp:Label>
                     <asp:TextBox ID="RenInput" runat="server"></asp:TextBox>
                 </div>
                 <div>

@@ -9,11 +9,12 @@ namespace CampingProjekt
     {
         public Calculation() { }
 
-        Manager manager = new Manager();
-
         SqlConnection newCon = new SqlConnection();
 
         #region Tables
+        // Table to hold the reservation_id
+        private DataTable rsvIdTable = new DataTable();
+
         // Table to hold the start date of the reservation to determine season which affects prices
         private DataTable dateTableData = new DataTable();
 
@@ -34,23 +35,105 @@ namespace CampingProjekt
         DateTime hSeason2 = new DateTime(2021, 8, 14);
         #endregion
 
+        #region SQL Connection method
+        /// <summary>
+        /// Returns a connection to the database.
+        /// </summary>
+        /// <returns></returns>
+        public SqlConnection NewConCalc()
+        {
+            // Creates a new SqlConnection object
+            SqlConnection newCon = new SqlConnection();
+
+            // Creates a SqlConnectionStringBuilder object which gets its connectionstring from the GetConString method.
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(GetConString());
+
+            // Gets the connectionstring from the SqlConnectionStringBuilder object, and copies it to the SqlConnection object
+            newCon.ConnectionString = builder.ConnectionString;
+
+            return newCon;
+        }
+
+        /// <summary>
+        /// Generates the connectionstring needed to establish a connection to the database.
+        /// </summary>
+        /// <returns></returns>
+        private static string GetConString()
+        {
+            // Returns a string with the information needed to make a connectionstring
+            return "Data Source=172.16.59.46;Initial Catalog=CampingDB;Persist Security Info=True;User ID=sa;Password=Password1234!";
+        }
+        #endregion
+
+        #region Gets rsvID
         /// <summary>
         /// Gets the newest reservation id 
         /// </summary>
         /// <returns></returns>
         public int RsvID ()
         {
-            string temp = manager.GetTableData(manager.dataTable);
+            string temp = GetTableData(rsvIdTable);
             int rsvID = Convert.ToInt32(temp);
             return rsvID;
         }
 
         /// <summary>
+        /// Gets the reservation_id associated with the date submission.
+        /// </summary>
+        public void GetRsvID()
+        {
+            newCon = NewConCalc();
+            newCon.Open();
+
+            string query = "SELECT * FROM RsvID-View";
+
+            SqlCommand getRsvID = new SqlCommand(query, newCon);
+
+            SqlDataAdapter dataAdapt = new SqlDataAdapter(getRsvID);
+
+            dataAdapt.Fill(rsvIdTable);
+
+            dataAdapt.Dispose();
+
+            newCon.Close();
+        }
+
+        public string GetTableData(DataTable table)
+        {
+            string data = string.Empty;
+
+            StringBuilder holder = new StringBuilder();
+
+            // Commences if the table exists and has atleast 1 row in it
+            if (null != table && null != table.Rows)
+            {
+                // Loops through the rows belonging to the given table
+                foreach (DataRow dataRow in table.Rows)
+                {
+                    // Gets and sets all of the values in the datatable to an array
+                    foreach (var item in dataRow.ItemArray)
+                    {
+                        // Adds values to the array, seperates each value by a comma
+                        holder.Append(item);
+                        holder.Append(',');
+                    }
+                    // Terminates the append operation
+                    holder.AppendLine();
+                }
+                // Converts the array to a string
+                data = holder.ToString();
+            }
+            return data;
+        }
+        #endregion
+
+        #region Date data
+        /// <summary>
         /// Gets the date data from the database
         /// </summary>
         public void GetDateData()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             int rsvID = RsvID();
@@ -68,6 +151,7 @@ namespace CampingProjekt
 
             newCon.Close();
         }
+        #endregion
 
         #region SQL View Methods
         // Methods that gets table data from the database and inserts it into a datatable which we can extract the values from.
@@ -101,7 +185,7 @@ namespace CampingProjekt
 
         private void GetPersonPrice()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             // Læg mærke til rækkefølgen som dataen bliver extracted i
@@ -148,7 +232,7 @@ namespace CampingProjekt
 
         private void GetSpotPrice()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             // Læg mærke til rækkefølgen som dataen bliver extracted i
@@ -195,7 +279,7 @@ namespace CampingProjekt
 
         private void GetAdditionalPrice()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             // Læg mærke til rækkefølgen som dataen bliver extracted i
@@ -244,7 +328,7 @@ namespace CampingProjekt
         #region SQL Command Methods
         private void GetPersonAmount()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             int rsvID = RsvID();
@@ -293,7 +377,7 @@ namespace CampingProjekt
 
         private void GetSpotAmount()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             int rsvID = RsvID();
@@ -342,7 +426,7 @@ namespace CampingProjekt
 
         private void GetAdditionalAmount()
         {
-            newCon = manager.NewConMan();
+            newCon = NewConCalc();
             newCon.Open();
 
             int rsvID = RsvID();
@@ -390,6 +474,7 @@ namespace CampingProjekt
         }
         #endregion
 
+        #region Price calculation methods
         /// <summary>
         /// Converts a string to an integer
         /// </summary>
@@ -602,5 +687,6 @@ namespace CampingProjekt
             }
             #endregion
         }
+        #endregion
     }
 }
