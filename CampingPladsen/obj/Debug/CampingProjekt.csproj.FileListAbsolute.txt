@@ -158,3 +158,26 @@ C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\VB
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.AppContext.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Console.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Http.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\roslyn\System.Xml.XPath.XDocument.dll
