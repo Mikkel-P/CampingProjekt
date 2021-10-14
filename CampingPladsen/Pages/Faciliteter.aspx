@@ -11,8 +11,8 @@
          <%-- Top Image Start --%>
 
     
-        <div class="hero-image">
-            <div class="hero-text">
+        <div class="hero-image" style="text-align: center">
+            <div class="hero-text" style="background-image: url('../Images/Camping Picture Sunset.jpg'); color: #FFFFFF;">
                     <br />
                 <h1>Faciliter</h1>
                 <p>En mere detaljeret forklaring om Faciliteterne på Camp Camping </p>
@@ -24,12 +24,12 @@
 
          <%-- Facility List Start --%>
 
-        <div class="header">
-            <div class="customContainer" style="background-color: rgba(44, 44, 44, 0.3);">
-                <h1>Faciliteter</h1>
-                <ul>
+        <div class="header" style="text-align: center; font-size: 28px;">
+            <div class="customContainer" style="background-color: rgba(44, 44, 44, 0.3); width: 1000px; height: 1130px; color: #FFFFFF;">
+                <h1>Facilitets Liste</h1>
+                <ul style="text-align: center; display: inline-block;">
                     <li>Badeland</li>
-                    <li>Reception</li>
+                    <li>Reception</li>  
                     <li>ServiceBygning</li>
                     <li><br /></li>
                     <li>Bortskaffelse af affald</li>
@@ -45,7 +45,7 @@
                  <%-- Facility Image Start --%>
 
                 <div class="customContainer">
-                        <img src="../Images/Camping%20picture.PNG" />
+                        <img src="../Images/Camping%20picture.PNG"/>
                 </div>
 
                   <%-- Facility Image End --%>

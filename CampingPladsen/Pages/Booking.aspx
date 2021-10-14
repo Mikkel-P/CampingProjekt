@@ -9,15 +9,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <main>
 
+        <div class="customContainer" style="background-color: rgba(44, 44, 44, 0.3); width: 1000px; height: 1575px; color: #FFFFFF;">
         <br />
         <br />
 
+
+         <div class="hero-image" style="background-image: url('../Images/Camping Picture Second Sunset.jpg'); color: #FFFFFF; height: 100px;">
+             <h1 style="text-align: center; font-size: 40px;">Book Online Her</h1>
+             <p style="text-align: center; font-size: 27px;">Reservation og Bekræftigelse</p>
+            </div>
 
         <div style="text-align: left" class="bookingContainer">
             <div class="calendarBox">
 
 
-                <h2 style="color: #FFFFFF; background-color: #C0C0C0;">Start Dato</h2>
+                <h2 style="color: #FFFFFF; background-color: #666666; position: page; text-align: center;">Start Dato</h2>
                 <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="100px" Width="260px">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                     <NextPrevStyle VerticalAlign="Bottom" />
@@ -29,12 +35,9 @@
                     <WeekendDayStyle BackColor="#FFFFCC" />
                 </asp:Calendar>
 
-
-
                 <br />
 
-
-                <h2 style="color: #FFFFFF; background-color: #C0C0C0;">Slut Dato</h2>
+                <h2 style="color: #FFFFFF; background-color: #666666; position: page; text-align: center;">Slut Dato</h2>
                 <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="100px" Width="260px">
                     <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                     <NextPrevStyle VerticalAlign="Bottom" />
@@ -45,25 +48,12 @@
                     <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
                     <WeekendDayStyle BackColor="#FFFFCC" />
                 </asp:Calendar>
-
-
-
             </div>
-
         </div>
-
-
-
         <br />
-
-
-
-
-
-
-        <asp:Image ID="Image1" runat="server" Height="98px" Width="815px" ImageUrl="https://image.freepik.com/free-vector/camping-horizontal-background-night-cartoon-style_96318-819.jpg" ImageAlign="Left" />
-        <h1 style="color: #FFFFFF; background-color: #C0C0C0;">Reservation</h1>
-        <div class="textBoxManager">
+     
+        <h1 style="color: #FFFFFF; background-color: #666666; position: page; text-align: center;">Reservation</h1>
+        <div class="textBoxManager" style="text-align: center">
             <div>
                 <asp:Label ID="Voksne" runat="server" Text="Antal voksne: "></asp:Label>
                 <asp:TextBox ID="VoksenInput" runat="server"></asp:TextBox>
@@ -167,10 +157,12 @@
             <div>
                 <asp:Button ID="Button1" runat="server" Text="Indsend informationer" OnClick="Button1_Click" />
             </div>
-            <div>
+            <div style="color: #FFFFFF">
                 <asp:LinkButton ID="LinkButton" runat="server" OnClick="LinkButton1_Click" href="../Pages/ReceiptPage.aspx">Kvittering</asp:LinkButton>
             </div>
 
         </div>
+
+            </div>
     </main>
 </asp:Content>

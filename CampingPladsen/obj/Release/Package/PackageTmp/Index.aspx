@@ -23,11 +23,13 @@
 
            <%-- General Info Start --%>
 
-        <div class="homeText">
+        <div class="homeText" style="color: #000000">
             <h2>General Info</h2>
             <p>
-               man kan tage kontakt til campingpladsen ved enten at ringe eller sende en e-mail til receptionen og bestille enten en plads til en campingvogn/autocamper inklusiv strøm og brug af pladsens faciliteter. Man kan også vælge at bestille en af hytterne hvis de er ledige hvilket naturligvis også er inklusive strøm og faciliteter.
-For at kunne lave en fuld
+               man kan tage kontakt til campingpladsen ved enten at ringe eller sende en e-mail til receptionen og 
+               bestille enten en plads til en campingvogn/autocamper inklusiv strøm og brug af pladsens faciliteter. 
+               Man kan også vælge at bestille en af hytterne hvis de er ledige hvilket naturligvis også er inklusive 
+               strøm og faciliteter.For at kunne lave en fuld
             </p>
 
         </div>
