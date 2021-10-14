@@ -22,6 +22,30 @@ namespace CampingProjekt.Pages
         }
 
         /// <summary>
+        /// Saves the textbox info concerning personal information, needed to identify individual customer.
+        /// </summary>
+        protected void PersonalInfoInput()
+        {
+            string cpr = cprInput.Text;
+
+            string fornavn = fornavnInput.Text;
+
+            string efternavn = efternavnInput.Text;
+
+            string vejnavn = vejnavnInput.Text;
+
+            int husNr = Convert.ToInt32(husNrInput.Text);
+
+            int postNr = Convert.ToInt32(postNrInput.Text);
+
+            string email = emailInput.Text;
+
+            string password = passwordInput.Text;
+
+            manager.PersonalInfoSubmit(cpr, fornavn, efternavn, vejnavn, husNr, postNr, email, password);
+        }
+
+        /// <summary>
         /// Stores the textbox info concerning amounts, needed for price calculation.
         /// </summary>
         protected void TextBoxAmountInput()
@@ -65,41 +89,27 @@ namespace CampingProjekt.Pages
                 (antalV, antalB, antalH, antalCPS, antalCPL, antalT, antalLH, antalSH,
                 antalSF, antalSS, antalSE, antalSV, badeBilletV, badeBilletB, cykelL, ren, sengeL);
         }
-
-        /// <summary>
-        /// Saves the textbox info concerning personal information, needed to identify individual customer.
-        /// </summary>
-        protected void PersonalInfoInput()
-        {
-            string cpr = cprInput.Text;
-
-            string fornavn = fornavnInput.Text;
-
-            string efternavn = efternavnInput.Text;
-
-            string vejnavn = vejnavnInput.Text;
-
-            int husNr = Convert.ToInt32(husNrInput.Text);
-
-            int postNr = Convert.ToInt32(postNrInput);
-
-            string email = emailInput.Text;
-
-            string password = passwordInput.Text;
-
-            manager.PersonalInfoSubmit(cpr, fornavn, efternavn, vejnavn, husNr, postNr, email, password);
-        }
         #endregion
 
-        #region Submit button
+        #region Submit and link buttons
         /// <summary>
         /// Executes the above methods to submit the information collected on the booking page.
         /// </summary>
-        protected void LinkButton1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
             DateInput();
+            PersonalInfoInput();
             TextBoxAmountInput();
-            PersonalInfoInput();            
+            manager.PriceInsertion();
+        }
+
+        /// <summary>
+        /// Redirects the user to the receipt page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {  
         }
         #endregion
     }

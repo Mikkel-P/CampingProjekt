@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Text;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
+using System.Collections.Generic;
 
 namespace CampingProjekt
 {
@@ -13,7 +14,7 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
-        public DataTable dataTable = new DataTable();
+        List<string> rsvIdList = new List<string>();
 
         #region SQL Connection
         /// <summary>
@@ -26,7 +27,17 @@ namespace CampingProjekt
         }
         #endregion
 
-        #region View method
+        #region Gets rsvID
+        /// <summary>
+        /// Gets the newest reservation id 
+        /// </summary>
+        /// <returns></returns>
+        public int RsvID()
+        {
+            int rsvID = Convert.ToInt32(rsvIdList[0]);
+            return rsvID;
+        }
+
         /// <summary>
         /// Gets the reservation_id associated with the date submission.
         /// </summary>
@@ -39,48 +50,14 @@ namespace CampingProjekt
 
             SqlCommand getRsvID = new SqlCommand(query, newCon);
 
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(getRsvID);
+            SqlDataReader reader = getRsvID.ExecuteReader();
 
-            dataAdapt.Fill(dataTable);
-
-            dataAdapt.Dispose();
+            while (reader.Read())
+            {
+                rsvIdList.Add(reader.GetString(1));
+            }
 
             newCon.Close();
-        }
-        #endregion
-
-        #region Data extraction method
-        /// <summary>
-        /// Inserts the reservation_id into a table which we can extract the value from.
-        /// </summary>
-        /// <param name="table"></param>
-        /// <returns></returns>
-        public string GetTableData(DataTable table)
-        {
-            string data = string.Empty;
-
-            StringBuilder holder = new StringBuilder();
-
-            // Commences if the table exists and has atleast 1 row in it
-            if (null != table && null != table.Rows)
-            {
-                // Loops through the rows belonging to the given table
-                foreach (DataRow dataRow in table.Rows)
-                {
-                    // Gets and sets all of the values in the datatable to an array
-                    foreach (var item in dataRow.ItemArray)
-                    {
-                        // Adds values to the array, seperates each value by a comma
-                        holder.Append(item);
-                        holder.Append(',');
-                    }
-                    // Terminates the append operation
-                    holder.AppendLine();
-                }
-                // Converts the array to a string
-                data = holder.ToString();
-            }
-            return data;
         }
         #endregion
 
@@ -95,14 +72,17 @@ namespace CampingProjekt
             newCon = NewConMan();
             newCon.Open();
 
-            SqlCommand insertArrival = new SqlCommand("StoredProcedure", newCon);
-            SqlCommand insertExit = new SqlCommand("StoredProcedure", newCon);
+            SqlCommand insertArrival = new SqlCommand("DateInsertion", newCon);
+            insertArrival.Parameters.Add("@Calendar1", SqlDbType.Text);
+            insertArrival.Parameters["@Calendar1"].Value = aDate;
+            //insertArrival.Parameters.AddWithValue("@Calendar1", aDate);
+            //insertArrival.ExecuteNonQuery();
+            //insertArrival.ExecuteReader();
 
-            insertArrival.Parameters.AddWithValue("@Calendar1", aDate);
-            insertExit.Parameters.AddWithValue("@Calendar2", eDate);
-
-            insertArrival.ExecuteNonQuery();
-            insertExit.ExecuteNonQuery();
+            SqlCommand insertExit = new SqlCommand("DateInsertion", newCon);
+            insertArrival.Parameters.Add("@Calendar2", SqlDbType.Text);
+            insertArrival.Parameters["@Calendar2"].Value = eDate;
+            //insertExit.ExecuteNonQuery();
 
             newCon.Close();
         }
@@ -135,80 +115,80 @@ namespace CampingProjekt
             newCon = NewConMan();
             newCon.Open();
 
-            string temp = GetTableData(dataTable);
+            int rsvID = Convert.ToInt32(rsvIdList[0]);
 
-            int rsvID = Convert.ToInt32(temp);
 
             SqlCommand insertRsvID = new SqlCommand("InputInsertion", newCon);
-            insertRsvID.Parameters.AddWithValue("@RsvID", rsvID);
+            insertRsvID.Parameters.Add("@RsvID", SqlDbType.Int);
+            insertRsvID.Parameters["@RsvID"].Value = rsvID;
 
             SqlCommand insertAntalV = new SqlCommand("InputInsertion", newCon);
-            insertAntalV.Parameters.AddWithValue("@VoksenInput", antalV);
-            insertAntalV.ExecuteNonQuery();
+            insertAntalV.Parameters.Add("@VoksenInput", SqlDbType.TinyInt);
+            insertAntalV.Parameters["@VoksenInput"].Value = antalV;
 
             SqlCommand insertAntalB = new SqlCommand("InputInsertion", newCon);
-            insertAntalB.Parameters.AddWithValue("@BarnInput", antalB);
-            insertAntalB.ExecuteNonQuery();
+            insertAntalB.Parameters.Add("@BarnInput", SqlDbType.Text);
+            insertAntalB.Parameters["@BarnInput"].Value = antalB;
 
             SqlCommand insertAntalH = new SqlCommand("InputInsertion", newCon);
-            insertAntalH.Parameters.AddWithValue("@HundeInput", antalH);
-            insertAntalH.ExecuteNonQuery();
+            insertAntalH.Parameters.Add("@HundeInput", SqlDbType.TinyInt);
+            insertAntalH.Parameters["@HundeInput"].Value = antalH;
 
             SqlCommand insertCPS = new SqlCommand("InputInsertion", newCon);
-            insertCPS.Parameters.AddWithValue("@StorCpInput", antalCPS);
-            insertCPS.ExecuteNonQuery();
+            insertCPS.Parameters.Add("@StorCpInput", SqlDbType.TinyInt);
+            insertCPS.Parameters["@StorCpInput"].Value = antalCPS;
 
             SqlCommand insertCPL = new SqlCommand("InputInsertion", newCon);
-            insertCPL.Parameters.AddWithValue("@LilleCpInput", antalCPL);
-            insertCPL.ExecuteNonQuery();
+            insertCPL.Parameters.Add("@LilleCpInput", SqlDbType.TinyInt);
+            insertCPL.Parameters["@LilleCpInput"].Value = antalCPL;
 
             SqlCommand insertT = new SqlCommand("InputInsertion", newCon);
-            insertT.Parameters.AddWithValue("@TeltInput", antalT);
-            insertT.ExecuteNonQuery();
+            insertT.Parameters.Add("@TeltInput", SqlDbType.TinyInt);
+            insertT.Parameters["@TeltInput"].Value = antalT;
 
             SqlCommand insertLH = new SqlCommand("InputInsertion", newCon);
-            insertLH.Parameters.AddWithValue("@LukHytInput", antalLH);
-            insertLH.ExecuteNonQuery();
+            insertLH.Parameters.Add("@LukHytInput", SqlDbType.TinyInt);
+            insertLH.Parameters["@LukHytInput"].Value = antalLH;
 
             SqlCommand insertSH = new SqlCommand("InputInsertion", newCon);
-            insertSH.Parameters.AddWithValue("@StandHytInput", antalSH);
-            insertSH.ExecuteNonQuery();
+            insertSH.Parameters.Add("@StandHytInput", SqlDbType.TinyInt);
+            insertSH.Parameters["@StandHytInput"].Value = antalSH;
 
             SqlCommand insertSF = new SqlCommand("InputInsertion", newCon);
-            insertSF.Parameters.AddWithValue("@ForInput", antalSF);
-            insertSF.ExecuteNonQuery();
+            insertSF.Parameters.Add("@ForInput", SqlDbType.TinyInt);
+            insertSF.Parameters["@ForInput"].Value = antalSF;
 
             SqlCommand insertSS = new SqlCommand("InputInsertion", newCon);
-            insertSS.Parameters.AddWithValue("@SommerInput", antalSS);
-            insertSS.ExecuteNonQuery();
+            insertSS.Parameters.Add("@SommerInput", SqlDbType.TinyInt);
+            insertSS.Parameters["@SommerInput"].Value = antalSS;
 
             SqlCommand insertSE = new SqlCommand("InputInsertion", newCon);
-            insertSE.Parameters.AddWithValue("@EfterInput", antalSE);
-            insertSE.ExecuteNonQuery();
+            insertSE.Parameters.Add("@Calendar2", SqlDbType.TinyInt);
+            insertSE.Parameters["@Calendar2"].Value = antalSE;
 
             SqlCommand insertSV = new SqlCommand("InputInsertion", newCon);
-            insertSV.Parameters.AddWithValue("@VinterInput", antalSV);
-            insertSV.ExecuteNonQuery();
+            insertSV.Parameters.Add("@VinterInput", SqlDbType.TinyInt);
+            insertSV.Parameters["@VinterInput"].Value = antalSV;
 
             SqlCommand insertBBV = new SqlCommand("InputInsertion", newCon);
-            insertBBV.Parameters.AddWithValue("@BadeVoksenInput", badeBilletV);
-            insertBBV.ExecuteNonQuery();
+            insertBBV.Parameters.Add("@BadeVoksenInput", SqlDbType.TinyInt);
+            insertBBV.Parameters["@BadeVoksenInput"].Value = badeBilletV;
 
             SqlCommand insertBBB = new SqlCommand("InputInsertion", newCon);
-            insertBBB.Parameters.AddWithValue("@BadeBarnInput", badeBilletB);
-            insertBBB.ExecuteNonQuery();
+            insertBBB.Parameters.Add("@BadeBarnInput", SqlDbType.TinyInt);
+            insertBBB.Parameters["@BadeBarnInput"].Value = badeBilletB;
 
             SqlCommand insertCL = new SqlCommand("InputInsertion", newCon);
-            insertCL.Parameters.AddWithValue("@CykelInput", cykelL);
-            insertCL.ExecuteNonQuery();
+            insertCL.Parameters.Add("@CykelInput", SqlDbType.TinyInt);
+            insertCL.Parameters["@CykelInput"].Value = cykelL;
 
             SqlCommand insertRen = new SqlCommand("InputInsertion", newCon);
-            insertRen.Parameters.AddWithValue("@RenInput", ren);
-            insertRen.ExecuteNonQuery();
+            insertRen.Parameters.Add("@RenInput", SqlDbType.TinyInt);
+            insertRen.Parameters["@RenInput"].Value = ren;
 
             SqlCommand insertSL = new SqlCommand("InputInsertion", newCon);
-            insertSL.Parameters.AddWithValue("@SengeInput", sengeL);
-            insertSL.ExecuteNonQuery();
+            insertSL.Parameters.Add("@SengeInput", SqlDbType.TinyInt);
+            insertSL.Parameters["@SengeInput"].Value = sengeL;
 
             newCon.Close();
         }
@@ -227,37 +207,42 @@ namespace CampingProjekt
         /// <param name="password"></param>
         public void PersonalInfoSubmit(string cpr, string fornavn, string efternavn, string vejnavn, int husNr, int postNr, string email, string password)
         {
+            newCon = NewConMan();
+            newCon.Open();
+
             SqlCommand insertCpr = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertCpr.Parameters.AddWithValue("@CprInput", cpr);
-            insertCpr.ExecuteNonQuery();
+            insertCpr.Parameters.Add("@CprInput", SqlDbType.Text);
+            insertCpr.Parameters["@CprInput"].Value = cpr;
 
             SqlCommand insertfornavn = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertfornavn.Parameters.AddWithValue("@FornavnInput", fornavn);
-            insertfornavn.ExecuteNonQuery();
+            insertfornavn.Parameters.Add("@FornavnInput", SqlDbType.Text);
+            insertfornavn.Parameters["@FornavnInput"].Value = fornavn;
 
             SqlCommand insertEfternavn = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertEfternavn.Parameters.AddWithValue("@EfternavnInput", efternavn);
-            insertEfternavn.ExecuteNonQuery();
+            insertEfternavn.Parameters.Add("@EfternavnInput", SqlDbType.Text);
+            insertEfternavn.Parameters["@EfternavnInput"].Value = efternavn;
 
             SqlCommand insertVejnavn = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertVejnavn.Parameters.AddWithValue("@VejnavnInput", vejnavn);
-            insertVejnavn.ExecuteNonQuery();
+            insertVejnavn.Parameters.Add("@VejnavnInput", SqlDbType.Text);
+            insertVejnavn.Parameters["@VejnavnInput"].Value = vejnavn;
 
             SqlCommand insertHusNr = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertHusNr.Parameters.AddWithValue("@HusNrInput", husNr);
-            insertHusNr.ExecuteNonQuery();
+            insertHusNr.Parameters.Add("@HusNrInput", SqlDbType.Text);
+            insertHusNr.Parameters["@HusNrInput"].Value = husNr;
 
             SqlCommand insertPostNr = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertPostNr.Parameters.AddWithValue("@PostNrInput", postNr);
-            insertPostNr.ExecuteNonQuery();
+            insertPostNr.Parameters.Add("@PostNrInput", SqlDbType.Text);
+            insertPostNr.Parameters["@PostNrInput"].Value = postNr;
 
             SqlCommand insertEmail = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertEmail.Parameters.AddWithValue("@EmailInput", email);
-            insertEmail.ExecuteNonQuery();
+            insertEmail.Parameters.Add("@EmailInput", SqlDbType.Text);
+            insertEmail.Parameters["@EmailInput"].Value = email;
 
             SqlCommand insertPassword = new SqlCommand("PersonalInfoInsertion", newCon);
-            insertPassword.Parameters.AddWithValue("@PasswordInput", password);
-            insertPassword.ExecuteNonQuery();
+            insertPassword.Parameters.Add("@PasswordInput", SqlDbType.Text);
+            insertPassword.Parameters["@PasswordInput"].Value = password;
+
+            newCon.Close();
         }
 
         /// <summary>
@@ -265,11 +250,16 @@ namespace CampingProjekt
         /// </summary>
         public void PriceInsertion()
         {
+            newCon = NewConMan();
+            newCon.Open();
+
             int totalPris =  calc.PriceCalc();
 
             SqlCommand insertTotalPris = new SqlCommand("TotalPriceInput", newCon);
-            insertTotalPris.Parameters.AddWithValue("@TotalPrice", totalPris);
-            insertTotalPris.ExecuteNonQuery();
+            insertTotalPris.Parameters.Add("@TotalPrice", SqlDbType.Int);
+            insertTotalPris.Parameters["@TotalPrice"].Value = totalPris;
+
+            newCon.Close();
         }
         #endregion
     }

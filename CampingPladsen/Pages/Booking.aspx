@@ -129,7 +129,7 @@
                 <asp:TextBox ID="RenInput" runat="server"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="Sengelinned" runat="server" Text="Nyt sengelinned: (Pr. stk.) "></asp:Label>
+                <asp:Label ID="Sengelinned" runat="server" Text="Nyt sengelinned: (Pr. ophold) "></asp:Label>
                 <asp:TextBox ID="SengeInput" runat="server"></asp:TextBox>
             </div>
             <div>
@@ -164,7 +164,13 @@
                 <asp:Label ID="Password" runat="server" Text="Password: "></asp:Label>
                 <asp:TextBox ID="passwordInput" runat="server"></asp:TextBox>
             </div>
-            <asp:LinkButton ID="SubmitButton" runat="server" OnClick="LinkButton1_Click" href="../Pages/ReceiptPage.aspx">Indsend</asp:LinkButton>
+            <div>
+                <asp:Button ID="Button1" runat="server" Text="Indsend informationer" OnClick="Button1_Click" />
+            </div>
+            <div>
+                <asp:LinkButton ID="LinkButton" runat="server" OnClick="LinkButton1_Click" href="../Pages/ReceiptPage.aspx">Kvittering</asp:LinkButton>
+            </div>
+
         </div>
     </main>
 </asp:Content>
