@@ -14,8 +14,6 @@ namespace CampingProjekt
 
         SqlConnection newCon = new SqlConnection();
 
-        List<string> rsvIdList = new List<string>();
-
         #region SQL Connection
         /// <summary>
         /// Calls on the calculation method to open a connection to the database.
@@ -24,40 +22,6 @@ namespace CampingProjekt
         public SqlConnection NewConMan()
         {
             return calc.NewConCalc();
-        }
-        #endregion
-
-        #region Gets rsvID
-        /// <summary>
-        /// Gets the newest reservation id 
-        /// </summary>
-        /// <returns></returns>
-        public int RsvID()
-        {
-            int rsvID = Convert.ToInt32(rsvIdList[0]);
-            return rsvID;
-        }
-
-        /// <summary>
-        /// Gets the reservation_id associated with the date submission.
-        /// </summary>
-        public void GetRsvID()
-        {
-            newCon = NewConMan();
-            newCon.Open();
-
-            string query = "SELECT * FROM RsvID-View";
-
-            SqlCommand getRsvID = new SqlCommand(query, newCon);
-
-            SqlDataReader reader = getRsvID.ExecuteReader();
-
-            while (reader.Read())
-            {
-                rsvIdList.Add(reader.GetString(1));
-            }
-
-            newCon.Close();
         }
         #endregion
 
@@ -115,8 +79,7 @@ namespace CampingProjekt
             newCon = NewConMan();
             newCon.Open();
 
-            int rsvID = Convert.ToInt32(rsvIdList[0]);
-
+            int rsvID = calc.RsvList();
 
             SqlCommand insertRsvID = new SqlCommand("InputInsertion", newCon);
             insertRsvID.Parameters.Add("@RsvID", SqlDbType.Int);

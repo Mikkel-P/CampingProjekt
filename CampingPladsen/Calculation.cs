@@ -21,24 +21,6 @@ namespace CampingProjekt
         List<string> spotAmountList = new List<string>();
         List<string> additionalAmountList = new List<string>();
 
-        #region Tables
-        // Table to hold the reservation_id
-        private DataTable rsvIdTable = new DataTable();
-
-        // Table to hold the start date of the reservation to determine season which affects prices
-        private DataTable dateTableData = new DataTable();
-
-        // Price info tables
-        private DataTable additionalPriceTableData = new DataTable();
-        private DataTable personPriceTableData = new DataTable();
-        private DataTable spotPriceTableData = new DataTable();
-
-        // Amount info tables
-        private DataTable additionalAmountTableData = new DataTable();
-        private DataTable personAmountTableData = new DataTable();
-        private DataTable spotAmountTableData = new DataTable();
-        #endregion
-
         #region Static dates
         // Dates to seperate the season prices
         DateTime hSeason1 = new DateTime(2021, 6, 14);
@@ -77,16 +59,6 @@ namespace CampingProjekt
 
         #region Gets rsvID
         /// <summary>
-        /// Gets the newest reservation id 
-        /// </summary>
-        /// <returns></returns>
-        public int RsvID ()
-        {
-            int rsvID = Convert.ToInt32(rsvIdList[0]);
-            return rsvID;
-        }
-
-        /// <summary>
         /// Gets the reservation_id associated with the date submission.
         /// </summary>
         public void GetRsvID()
@@ -104,8 +76,18 @@ namespace CampingProjekt
             {
                 rsvIdList.Add(reader.GetString(1));
             }
-
             newCon.Close();
+        }
+
+        /// <summary>
+        /// Gets the newest reservation id 
+        /// </summary>
+        /// <returns></returns>
+        public int RsvList()
+        {
+            GetRsvID();
+            int rsvID = Convert.ToInt32(rsvIdList[0]);
+            return rsvID;
         }
         #endregion
 
@@ -118,7 +100,7 @@ namespace CampingProjekt
             newCon = NewConCalc();
             newCon.Open();
 
-            int rsvID = RsvID();
+            int rsvID = RsvList();
 
             string query = $"SELECT * FROM Reservations_tabel WHERE Reservations_id = {rsvID}";
 
@@ -215,48 +197,48 @@ namespace CampingProjekt
             // Adds the contents of the views to a list
             while (getFallPrice.Read())
             {
-                personPriceList.Add(getFallPrice.GetString(1));
-                personPriceList.Add(getFallPrice.GetString(2));
+                spotPriceList.Add(getFallPrice.GetString(1));
+                spotPriceList.Add(getFallPrice.GetString(2));
             }
             while (GetSpringPrice.Read())
             {
-                personPriceList.Add(GetSpringPrice.GetString(1));
-                personPriceList.Add(GetSpringPrice.GetString(2));
+                spotPriceList.Add(GetSpringPrice.GetString(1));
+                spotPriceList.Add(GetSpringPrice.GetString(2));
             }
             while (getLilleCpPrice.Read())
             {
-                personPriceList.Add(getLilleCpPrice.GetString(1));
-                personPriceList.Add(getLilleCpPrice.GetString(2));
+                spotPriceList.Add(getLilleCpPrice.GetString(1));
+                spotPriceList.Add(getLilleCpPrice.GetString(2));
             }
             while (getLukHytPrice.Read())
             {
-                personPriceList.Add(getLukHytPrice.GetString(1));
-                personPriceList.Add(getLukHytPrice.GetString(2));
+                spotPriceList.Add(getLukHytPrice.GetString(1));
+                spotPriceList.Add(getLukHytPrice.GetString(2));
             }
             while (getSummerPrice.Read())
             {
-                personPriceList.Add(getSummerPrice.GetString(1));
-                personPriceList.Add(getSummerPrice.GetString(2));
+                spotPriceList.Add(getSummerPrice.GetString(1));
+                spotPriceList.Add(getSummerPrice.GetString(2));
             }
             while (getStandHytPrice.Read())
             {
-                personPriceList.Add(getStandHytPrice.GetString(1));
-                personPriceList.Add(getStandHytPrice.GetString(2));
+                spotPriceList.Add(getStandHytPrice.GetString(1));
+                spotPriceList.Add(getStandHytPrice.GetString(2));
             }
             while (getStorCpPrice.Read())
             {
-                personPriceList.Add(getStorCpPrice.GetString(1));
-                personPriceList.Add(getStorCpPrice.GetString(2));
+                spotPriceList.Add(getStorCpPrice.GetString(1));
+                spotPriceList.Add(getStorCpPrice.GetString(2));
             }
             while (getTeltPrice.Read())
             {
-                personPriceList.Add(getTeltPrice.GetString(1));
-                personPriceList.Add(getTeltPrice.GetString(2));
+                spotPriceList.Add(getTeltPrice.GetString(1));
+                spotPriceList.Add(getTeltPrice.GetString(2));
             }
             while (getWinterPrice.Read())
             {
-                personPriceList.Add(getWinterPrice.GetString(1));
-                personPriceList.Add(getWinterPrice.GetString(2));
+                spotPriceList.Add(getWinterPrice.GetString(1));
+                spotPriceList.Add(getWinterPrice.GetString(2));
             }
             newCon.Close();
         }
@@ -266,17 +248,48 @@ namespace CampingProjekt
             newCon = NewConCalc();
             newCon.Open();
 
-            // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = "SELECT * FROM AdditionalPrices-View";
+            // FIX THESE VIEWS
+            string query1 = "SELECT * FROM AdditionalPrices-View";
+            string query2 = "SELECT * FROM AdditionalPrices-View";
+            string query3 = "SELECT * FROM AdditionalPrices-View";
+            string query4 = "SELECT * FROM AdditionalPrices-View";
+            string query5 = "SELECT * FROM AdditionalPrices-View";
 
-            SqlCommand getAdditionalPrice = new SqlCommand(query, newCon);
+            SqlCommand comm1 = new SqlCommand(query1, newCon);
+            SqlCommand comm2 = new SqlCommand(query2, newCon);
+            SqlCommand comm3 = new SqlCommand(query3, newCon);
+            SqlCommand comm4 = new SqlCommand(query4, newCon);
+            SqlCommand comm5 = new SqlCommand(query5, newCon);
 
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAdditionalPrice);
+            // Reads the data from the SQL commands
+            SqlDataReader badeBilletV = comm1.ExecuteReader();
+            SqlDataReader badeBilletB = comm2.ExecuteReader();
+            SqlDataReader cykelLeje = comm3.ExecuteReader();
+            SqlDataReader ren = comm4.ExecuteReader();
+            SqlDataReader sengeLinned = comm5.ExecuteReader();
 
-            dataAdapt.Fill(additionalPriceTableData);
 
-            dataAdapt.Dispose();
-
+            // Adds the contents of the views to a list
+            while (badeBilletV.Read())
+            {
+                additionalPriceList.Add(badeBilletV.GetString(1));
+            }
+            while (badeBilletB.Read())
+            {
+                additionalPriceList.Add(badeBilletB.GetString(1));
+            }
+            while (cykelLeje.Read())
+            {
+                additionalPriceList.Add(cykelLeje.GetString(1));
+            }
+            while (ren.Read())
+            {
+                additionalPriceList.Add(ren.GetString(1));
+            }
+            while (sengeLinned.Read())
+            {
+                additionalPriceList.Add(sengeLinned.GetString(1));
+            }
             newCon.Close();
         }
         #endregion
@@ -287,18 +300,36 @@ namespace CampingProjekt
             newCon = NewConCalc();
             newCon.Open();
 
-            int rsvID = RsvID();
+            int rsvID = RsvList();
 
-            // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = $"SELECT * FROM Person_type_relation WHERE Reservations_id = {rsvID}";
+            // Check if this sql command is possible
+            string query1 = $"SELECT * FROM Person_type_relation (Adntal_personer) WHERE (Reservations_id = {rsvID}) AND (Person_type='Voksen'";
+            string query2 = $"SELECT * FROM Person_type_relation (Adntal_personer) WHERE (Reservations_id = {rsvID}) AND (Person_type='Børn'";
+            string query3 = $"SELECT * FROM Person_type_relation (Adntal_personer) WHERE (Reservations_id = {rsvID}) AND (Person_type='Hund'";
 
-            SqlCommand getAmounts = new SqlCommand(query, newCon);
+            SqlCommand comm1 = new SqlCommand(query1, newCon);
+            SqlCommand comm2 = new SqlCommand(query2, newCon);
+            SqlCommand comm3 = new SqlCommand(query3, newCon);
 
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAmounts);
+            // Reads the data from the SQL commands
+            SqlDataReader getVoksenAmount = comm1.ExecuteReader();
+            SqlDataReader getBarnAmount = comm2.ExecuteReader();
+            SqlDataReader getHundAmount = comm3.ExecuteReader();
 
-            dataAdapt.Fill(personAmountTableData);
 
-            dataAdapt.Dispose();
+            // Adds the contents of the views to a list
+            while (getVoksenAmount.Read())
+            {
+                personAmountList.Add(getVoksenAmount.GetString(1));
+            }
+            while (getBarnAmount.Read())
+            {
+                personAmountList.Add(getBarnAmount.GetString(1));
+            }
+            while (getHundAmount.Read())
+            {
+                personAmountList.Add(getHundAmount.GetString(1));
+            }
 
             newCon.Close();
         }
@@ -308,19 +339,78 @@ namespace CampingProjekt
             newCon = NewConCalc();
             newCon.Open();
 
-            int rsvID = RsvID();
+            int rsvID = RsvList();
 
             // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = $"SELECT * FROM Plads_type_relation WHERE Reservations_id = {rsvID}";
+            string query1 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Efterår')";
+            string query2 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Forår')";
+            string query3 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Lille campingplads')";
+            string query4 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Luksus hytte')";
+            string query5 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Sommer')";
+            string query6 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Standard hytte')";
+            string query7 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Stor campingplads')";
+            string query8 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Teltplads')";
+            string query9 = $"SELECT * FROM Plads_type_relation WHERE (Reservations_id = {rsvID}) AND (Plads_type='Vinter')";
 
-            SqlCommand getAmounts = new SqlCommand(query, newCon);
+            // Making SqlCommand objects from the strings above
+            SqlCommand comm1 = new SqlCommand(query1, newCon);
+            SqlCommand comm2 = new SqlCommand(query2, newCon);
+            SqlCommand comm3 = new SqlCommand(query3, newCon);
+            SqlCommand comm4 = new SqlCommand(query4, newCon);
+            SqlCommand comm5 = new SqlCommand(query5, newCon);
+            SqlCommand comm6 = new SqlCommand(query6, newCon);
+            SqlCommand comm7 = new SqlCommand(query7, newCon);
+            SqlCommand comm8 = new SqlCommand(query8, newCon);
+            SqlCommand comm9 = new SqlCommand(query9, newCon);
 
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAmounts);
+            // Reads the data from the SQL commands
+            SqlDataReader getFallAmount = comm1.ExecuteReader();
+            SqlDataReader GetSpringAmount = comm2.ExecuteReader();
+            SqlDataReader getLilleCpAmount = comm3.ExecuteReader();
+            SqlDataReader getLukHytAmount = comm4.ExecuteReader();
+            SqlDataReader getSummerAmount = comm5.ExecuteReader();
+            SqlDataReader getStandHytAmount = comm6.ExecuteReader();
+            SqlDataReader getStorCpAmount = comm7.ExecuteReader();
+            SqlDataReader getTeltAmount = comm8.ExecuteReader();
+            SqlDataReader getWinterAmount = comm9.ExecuteReader();
 
-            dataAdapt.Fill(spotAmountTableData);
-
-            dataAdapt.Dispose();
-
+            // Adds the contents of the views to a list
+            while (getFallAmount.Read())
+            {
+                spotAmountList.Add(getFallAmount.GetString(1));
+            }
+            while (GetSpringAmount.Read())
+            {
+                spotAmountList.Add(GetSpringAmount.GetString(1));
+            }
+            while (getLilleCpAmount.Read())
+            {
+                spotAmountList.Add(getLilleCpAmount.GetString(1));
+            }
+            while (getLukHytAmount.Read())
+            {
+                spotAmountList.Add(getLukHytAmount.GetString(1));
+            }
+            while (getSummerAmount.Read())
+            {
+                spotAmountList.Add(getSummerAmount.GetString(1));
+            }
+            while (getStandHytAmount.Read())
+            {
+                spotAmountList.Add(getStandHytAmount.GetString(1));
+            }
+            while (getStorCpAmount.Read())
+            {
+                spotAmountList.Add(getStorCpAmount.GetString(1));
+            }
+            while (getTeltAmount.Read())
+            {
+                spotAmountList.Add(getTeltAmount.GetString(1));
+            }
+            while (getWinterAmount.Read())
+            {
+                spotAmountList.Add(getWinterAmount.GetString(1));
+            }
             newCon.Close();
         }
 
@@ -329,18 +419,49 @@ namespace CampingProjekt
             newCon = NewConCalc();
             newCon.Open();
 
-            int rsvID = RsvID();
+            int rsvID = RsvList();
 
-            // Læg mærke til rækkefølgen som dataen bliver extracted i
-            string query = $"SELECT * FROM Tillægs_type_relation WHERE Reservations_id = {rsvID}";
+            string query1 = $"SELECT * FROM Tillægs_type_relation WHERE (Reservations_id = {rsvID}) AND (Tillægs_type='Badeland_børn'";
+            string query2 = $"SELECT * FROM Tillægs_type_relation WHERE (Reservations_id = {rsvID}) AND (Tillægs_type='Badeland_voksen'";
+            string query3 = $"SELECT * FROM Tillægs_type_relation WHERE (Reservations_id = {rsvID}) AND (Tillægs_type='Cykelleje'";
+            string query4 = $"SELECT * FROM Tillægs_type_relation WHERE (Reservations_id = {rsvID}) AND (Tillægs_type='Rengøring'";
+            string query5 = $"SELECT * FROM Tillægs_type_relation WHERE (Reservations_id = {rsvID}) AND (Tillægs_type='Sengelinned'";
 
-            SqlCommand getAmounts = new SqlCommand(query, newCon);
+            // Making SqlCommand objects from the strings above
+            SqlCommand comm1 = new SqlCommand(query1, newCon);
+            SqlCommand comm2 = new SqlCommand(query2, newCon);
+            SqlCommand comm3 = new SqlCommand(query3, newCon);
+            SqlCommand comm4 = new SqlCommand(query4, newCon);
+            SqlCommand comm5 = new SqlCommand(query5, newCon);
 
-            SqlDataAdapter dataAdapt = new SqlDataAdapter(getAmounts);
+            // Reads the data from the SQL commands
+            SqlDataReader getBBVAmount = comm1.ExecuteReader();
+            SqlDataReader GetBBBAmount = comm2.ExecuteReader();
+            SqlDataReader getCykelAmount = comm3.ExecuteReader();
+            SqlDataReader getRenAmount = comm4.ExecuteReader();
+            SqlDataReader getSengeAmount = comm5.ExecuteReader();
 
-            dataAdapt.Fill(additionalAmountTableData);
-
-            dataAdapt.Dispose();
+            // Adds the contents of the views to a list
+            while (getBBVAmount.Read())
+            {
+                additionalAmountList.Add(getBBVAmount.GetString(1));
+            }
+            while (GetBBBAmount.Read())
+            {
+                additionalAmountList.Add(GetBBBAmount.GetString(1));
+            }
+            while (getCykelAmount.Read())
+            {
+                additionalAmountList.Add(getCykelAmount.GetString(1));
+            }
+            while (getRenAmount.Read())
+            {
+                additionalAmountList.Add(getRenAmount.GetString(1));
+            }
+            while (getSengeAmount.Read())
+            {
+                additionalAmountList.Add(getSengeAmount.GetString(1));
+            };
 
             newCon.Close();
         }
@@ -356,8 +477,8 @@ namespace CampingProjekt
             #region Date extraction
             // Gets the arrival and exit date for the reservation so we can calculate price depending on season
             GetDateData();
-            string aDate = dateList[1];
-            string eDate = dateList[2];
+            string aDate = dateList[0];
+            string eDate = dateList[1];
 
             DateTime arrivalDate = DateTime.Parse(aDate);
             DateTime exitDate = DateTime.Parse(eDate);
@@ -415,35 +536,35 @@ namespace CampingProjekt
             GetPersonAmount();
             List<int> personAmount = personPriceList.ConvertAll(int.Parse);
 
-            int barnAmount = personAmount[2];
-            int hundeAmount = personAmount[5];
-            int voksenAmount = personAmount[8];
+            int barnAmount = personAmount[0];
+            int hundeAmount = personAmount[1];
+            int voksenAmount = personAmount[2];
             #endregion
 
             #region Spot amount
             GetSpotAmount();
             List<int> spotAmount = personPriceList.ConvertAll(int.Parse);
 
-            int fallAmount = spotAmount[2];
-            int springAmount = spotAmount[5];
-            int cpLilleAmount = spotAmount[8];
-            int lukHytteAmount = spotAmount[11];
-            int summerAmount = spotAmount[14];
-            int standHytteAmount = spotAmount[17];
-            int cpStorAmount = spotAmount[20];
-            int teltAmount = spotAmount[23];
-            int winterAmount = spotAmount[26];
+            int fallAmount = spotAmount[0];
+            int springAmount = spotAmount[1];
+            int cpLilleAmount = spotAmount[2];
+            int lukHytteAmount = spotAmount[3];
+            int summerAmount = spotAmount[4];
+            int standHytteAmount = spotAmount[5];
+            int cpStorAmount = spotAmount[6];
+            int teltAmount = spotAmount[7];
+            int winterAmount = spotAmount[8];
             #endregion
 
             #region Additional amount
             GetAdditionalAmount();
             List<int> additionalAmount = personPriceList.ConvertAll(int.Parse);
 
-            int badeBarnAmount = additionalAmount[2];
-            int badeVoksenAmount = additionalAmount[5];
-            int cykelLejeAmount = additionalAmount[8];
-            int renAmount = additionalAmount[11];
-            int sengeLinnedAmount = additionalAmount[14];
+            int badeBarnAmount = additionalAmount[0];
+            int badeVoksenAmount = additionalAmount[1];
+            int cykelLejeAmount = additionalAmount[2];
+            int renAmount = additionalAmount[3];
+            int sengeLinnedAmount = additionalAmount[4];
             #endregion
 
             #region Actual price calculation

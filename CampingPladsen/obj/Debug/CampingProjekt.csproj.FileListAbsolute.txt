@@ -93,7 +93,6 @@ C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDo
 C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.AssemblyReference.cache
 C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CoreCompileInputs.cache
-C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.CopyComplete
 C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.dll
 C:\Users\Mpizz\Desktop\GitHub\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.pdb
 C:\Users\Mpizz\Desktop\Visual Studio\CampingProjekt\CampingPladsen\obj\Debug\CampingProjekt.csproj.AssemblyReference.cache
