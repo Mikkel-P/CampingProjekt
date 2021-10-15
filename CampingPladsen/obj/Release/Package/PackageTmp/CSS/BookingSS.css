@@ -11,23 +11,18 @@
     justify-content: space-evenly;
 }
 
-
 * {
     box-sizing: border-box;
 }
 
-/* Create two equal columns that floats next to each other */
-.column {
-    float: right;
-    width: 50%;
-    padding: 10px;
-    height: 400px; /* Should be removed. Only for demonstration */
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.button {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
 }
